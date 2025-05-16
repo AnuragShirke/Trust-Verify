@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { loginUser, registerUser, fetchCurrentUser } from '@/lib/api';
+import { loginUser, registerUser, fetchCurrentUser } from '../lib/api';
 
 interface User {
   id: string;
@@ -29,7 +29,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // Check if user is already logged in
     const checkAuthStatus = async () => {
       const token = localStorage.getItem('token');
-      
+
       if (token) {
         try {
           const userData = await fetchCurrentUser();
@@ -39,17 +39,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           localStorage.removeItem('token');
         }
       }
-      
+
       setIsLoading(false);
     };
-    
+
     checkAuthStatus();
   }, []);
 
   const login = async (email: string, password: string) => {
     const { access_token } = await loginUser(email, password);
     localStorage.setItem('token', access_token);
-    
+
     // Fetch user data after successful login
     const userData = await fetchCurrentUser();
     setUser(userData);
@@ -57,10 +57,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const register = async (email: string, username: string, password: string) => {
     const userData = await registerUser(email, username, password);
-    
+
     // Auto login after registration
     await login(email, password);
-    
+
     return userData;
   };
 
