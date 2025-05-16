@@ -1,11 +1,17 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { cn } from '../lib/utils';
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 import { ThemeToggle } from './ThemeToggle';
 import { Button } from './ui/button';
 import { Avatar, AvatarFallback } from './ui/avatar';
 import { useAuth } from '../context/AuthContext';
+
+// Inline the utility function from utils.ts
+function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 
 const navItems = [
   { name: 'Home', path: '/' },
