@@ -5,7 +5,7 @@ import { ThemeToggle } from './ThemeToggle';
 import { Button } from './ui/button';
 import { Avatar, AvatarFallback } from './ui/avatar';
 import { useAuth } from '../context/AuthContext';
-import { cn } from '../utils.js';
+import { cn } from './utils.js';
 
 const navItems = [
   { name: 'Home', path: '/' },
