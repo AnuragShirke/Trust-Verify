@@ -1,5 +1,75 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { loginUser, registerUser, fetchCurrentUser } from '../lib/api';
+// Import directly from the API module
+import axios from 'axios';
+
+// API URL from environment variable with fallback
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
+// Create axios instance
+const api = axios.create({
+  baseURL: API_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+// Add auth token to requests
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+// Auth functions used in this component
+const loginUser = async (username: string, password: string) => {
+  const formData = new FormData();
+  formData.append('username', username);
+  formData.append('password', password);
+
+  try {
+    const response = await api.post('/token', formData, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
+    return response.data;
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response) {
+      throw new Error(error.response.data.detail || 'Login failed');
+    }
+    throw new Error('Login failed. Please try again.');
+  }
+};
+
+const registerUser = async (email: string, username: string, password: string) => {
+  try {
+    const response = await api.post('/register', {
+      email,
+      username,
+      password,
+    });
+    return response.data;
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response) {
+      throw new Error(error.response.data.detail || 'Registration failed');
+    }
+    throw new Error('Registration failed. Please try again.');
+  }
+};
+
+const fetchCurrentUser = async () => {
+  try {
+    const response = await api.get('/users/me');
+    return response.data;
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response && error.response.status === 401) {
+      throw new Error('Authentication expired. Please login again.');
+    }
+    throw new Error('Failed to fetch user data');
+  }
+};
 
 interface User {
   id: string;
