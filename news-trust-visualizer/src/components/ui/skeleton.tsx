@@ -1,4 +1,4 @@
-import { cn } from "../../../utils.js";
+import { cn } from "./utils.js";
 
 function Skeleton({
   className,
