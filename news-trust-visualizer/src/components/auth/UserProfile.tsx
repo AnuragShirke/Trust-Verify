@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Separator } from '@/components/ui/separator';
-import { useAuth } from '@/context/AuthContext';
-import { fetchUserProfile, fetchUserAnalyses } from '@/lib/api';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
+import { Button } from '../../components/ui/button';
+import { Avatar, AvatarFallback } from '../../components/ui/avatar';
+import { Separator } from '../../components/ui/separator';
+import { useAuth } from '../../context/AuthContext';
+import { fetchUserProfile, fetchUserAnalyses } from './api';
 
 interface UserAnalysis {
   id: string;
@@ -25,14 +25,14 @@ export default function UserProfile() {
   useEffect(() => {
     const loadUserData = async () => {
       if (!user) return;
-      
+
       setIsLoading(true);
       try {
         const [profileData, analysesData] = await Promise.all([
           fetchUserProfile(),
           fetchUserAnalyses()
         ]);
-        
+
         setProfile(profileData);
         setAnalyses(analysesData);
       } catch (err) {
@@ -42,7 +42,7 @@ export default function UserProfile() {
         setIsLoading(false);
       }
     };
-    
+
     loadUserData();
   }, [user]);
 
@@ -96,18 +96,18 @@ export default function UserProfile() {
                 {new Date(user.created_at).toLocaleDateString()}
               </span>
             </div>
-            
+
             <div className="flex justify-between items-center">
               <span className="text-sm text-gray-500">Last login</span>
               <span className="text-sm">
-                {user.last_login 
-                  ? new Date(user.last_login).toLocaleDateString() 
+                {user.last_login
+                  ? new Date(user.last_login).toLocaleDateString()
                   : 'N/A'}
               </span>
             </div>
-            
+
             <Separator />
-            
+
             <div className="flex justify-end">
               <Button variant="outline" onClick={logout}>
                 Logout
@@ -144,8 +144,8 @@ export default function UserProfile() {
                     </div>
                     <div className="flex items-center space-x-2">
                       <span className={`text-xs px-2 py-1 rounded-full ${
-                        analysis.prediction === 'REAL' 
-                          ? 'bg-green-100 text-green-800' 
+                        analysis.prediction === 'REAL'
+                          ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
                       }`}>
                         {analysis.prediction}
