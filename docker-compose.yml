@@ -1,0 +1,157 @@
+version: '3.8'
+
+services:
+  # API Service
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: fake-news-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/app
+      - ./mlops:/app/mlops
+      - ./model:/app/model
+      - ./data:/app/data
+      - api-cache:/app/cache
+      - mlflow-data:/app/mlops/mlruns
+    environment:
+      - PYTHONUNBUFFERED=1
+      - CORS_ORIGINS=http://localhost:5173,http://localhost:8080
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - MLFLOW_EXPERIMENT_NAME=fake-news-detector
+      - USE_MLFLOW=true
+      - MODEL_NAME=fake-news-classifier
+      - MODEL_STAGE=Production
+    restart: unless-stopped
+    networks:
+      - fake-news-network
+
+  # Frontend Service
+  frontend:
+    build:
+      context: ./news-trust-visualizer
+      dockerfile: Dockerfile
+    container_name: fake-news-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./news-trust-visualizer:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - api
+    networks:
+      - fake-news-network
+
+  # MLflow Service
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.11.1
+    container_name: fake-news-mlflow-server
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow-data:/mlflow/mlruns
+      - mlflow-artifacts:/mlflow/artifacts
+    environment:
+      - MLFLOW_TRACKING_URI=http://localhost:5000
+      - MLFLOW_DEFAULT_ARTIFACT_ROOT=/mlflow/artifacts
+    command: mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:///mlflow.db --default-artifact-root /mlflow/artifacts
+    networks:
+      - fake-news-network
+
+  # Redis Service
+  redis:
+    image: redis:7.0-alpine
+    container_name: fake-news-redis-server
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - fake-news-network
+
+  # Pipeline Service
+  pipeline:
+    build:
+      context: ./pipeline
+      dockerfile: Dockerfile
+    container_name: fake-news-pipeline
+    volumes:
+      - ./pipeline:/app
+      - ./model:/app/model
+      - ./data:/app/data
+      - pipeline-logs:/app/logs
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - PYTHONUNBUFFERED=1
+      - API_URL=http://api:8000
+    depends_on:
+      - redis
+      - api
+    networks:
+      - fake-news-network
+
+  # Dashboard Service
+  dashboard:
+    build:
+      context: ./pipeline
+      dockerfile: Dockerfile.dashboard
+    container_name: fake-news-dashboard
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./pipeline:/app
+      - pipeline-logs:/app/logs
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - HOST=0.0.0.0
+      - PORT=8080
+      - API_URL=http://api:8000
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - redis
+      - pipeline
+    command: ["python", "dashboard_server.py"]
+    networks:
+      - fake-news-network
+
+  # Real-time Dashboard Service
+  realtime-dashboard:
+    build:
+      context: ./pipeline
+      dockerfile: Dockerfile.dashboard
+    container_name: fake-news-realtime-dashboard
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./pipeline:/app
+      - pipeline-logs:/app/logs
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - HOST=0.0.0.0
+      - PORT=8081
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - redis
+      - pipeline
+    command: ["python", "realtime_dashboard.py"]
+    networks:
+      - fake-news-network
+
+volumes:
+  api-cache:
+  mlflow-data:
+  mlflow-artifacts:
+  redis-data:
+  pipeline-logs:
+
+networks:
+  fake-news-network:
+    driver: bridge

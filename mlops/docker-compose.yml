@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # MLflow tracking server
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.11.1
+    container_name: mlops-mlflow-server
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow-data:/mlflow/mlruns
+      - mlflow-artifacts:/mlflow/artifacts
+    environment:
+      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI:-http://localhost:5000}
+      - MLFLOW_DEFAULT_ARTIFACT_ROOT=${MLFLOW_ARTIFACT_ROOT:-/mlflow/artifacts}
+    command: mlflow server --host 0.0.0.0 --port ${PORT:-5000} --backend-store-uri ${MLFLOW_BACKEND_STORE_URI:-sqlite:///mlflow.db} --default-artifact-root ${MLFLOW_ARTIFACT_ROOT:-/mlflow/artifacts}
+    networks:
+      - mlops-network
+    restart: unless-stopped
+
+  # Scheduled retraining service
+  retraining:
+    build:
+      context: ..
+      dockerfile: mlops/Dockerfile.mlops
+    container_name: mlops-retraining
+    volumes:
+      - ../model:/app/model
+      - ../data:/app/data
+      - ./:/app/mlops
+      - retraining-logs:/app/mlops/logs
+    environment:
+      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI:-http://mlflow:5000}
+      - PYTHONUNBUFFERED=1
+      - RETRAINING_SCHEDULE=${RETRAINING_SCHEDULE:-0 0 * * *}
+    depends_on:
+      - mlflow
+    command: python /app/mlops/scheduled_retraining.py --deploy
+    networks:
+      - mlops-network
+    restart: unless-stopped
+
+  # Drift detection service
+  drift-detection:
+    build:
+      context: ..
+      dockerfile: mlops/Dockerfile.mlops
+    container_name: mlops-drift-detection
+    volumes:
+      - ../model:/app/model
+      - ../data:/app/data
+      - ./:/app/mlops
+      - drift-logs:/app/mlops/logs
+    environment:
+      - MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI:-http://mlflow:5000}
+      - PYTHONUNBUFFERED=1
+      - DRIFT_CHECK_SCHEDULE=${DRIFT_CHECK_SCHEDULE:-0 */6 * * *}
+    depends_on:
+      - mlflow
+    command: python /app/mlops/drift_detection.py --monitor
+    networks:
+      - mlops-network
+    restart: unless-stopped
+
+networks:
+  mlops-network:
+    driver: bridge
+
+volumes:
+  mlflow-data:
+  mlflow-artifacts:
+  retraining-logs:
+  drift-logs:

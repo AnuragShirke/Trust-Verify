@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector API</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        .endpoint {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .method {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .path {
+            font-family: monospace;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        pre {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fake News Detector API</h1>
+    <p>Welcome to the Fake News Detector API. This API provides endpoints for detecting fake news and calculating trust scores for news articles.</p>
+
+    <div class="buttons">
+        <a href="/docs" class="btn">API Documentation</a>
+        <a href="/redoc" class="btn">ReDoc Documentation</a>
+        <a href="/api-info" class="btn">API Info</a>
+    </div>
+
+    <h2>Available Endpoints</h2>
+
+    <div class="endpoint">
+        <div class="method">POST</div>
+        <span class="path">/predict</span>
+        <p>Predict whether a news article is real or fake.</p>
+        <h3>Request Body</h3>
+        <pre><code>{
+  "text": "Your news article content here"
+}</code></pre>
+        <h3>Response</h3>
+        <pre><code>{
+  "prediction": "REAL",
+  "confidence": 0.85,
+  "text_length": 1024
+}</code></pre>
+    </div>
+
+    <div class="endpoint">
+        <div class="method">POST</div>
+        <span class="path">/trust-score</span>
+        <p>Calculate a trust score for a news article.</p>
+        <h3>Request Body</h3>
+        <pre><code>{
+  "text": "Your news article content here"
+}</code></pre>
+        <h3>Response</h3>
+        <pre><code>{
+  "score": 75,
+  "trust_level": "High Trust",
+  "prediction": "REAL",
+  "factors": {
+    "source_credibility": 70,
+    "content_analysis": 80,
+    "language_analysis": 65,
+    "fact_verification": 85
+  },
+  "details": {
+    "word_count": 250,
+    "has_citations": 1,
+    "sensationalism_level": 0,
+    "readability_score": 65.5,
+    "sentiment_polarity": 0.12,
+    "prediction_confidence": 0.85
+  }
+}</code></pre>
+    </div>
+
+    <div class="endpoint">
+        <div class="method">POST</div>
+        <span class="path">/extract-url</span>
+        <p>Extract content from a URL.</p>
+        <h3>Request Body</h3>
+        <pre><code>{
+  "url": "https://example.com/news-article"
+}</code></pre>
+        <h3>Response</h3>
+        <pre><code>{
+  "title": "Example News Article",
+  "content": "The extracted content of the article...",
+  "source": "example.com",
+  "source_credibility": 65,
+  "extraction_method": "newspaper"
+}</code></pre>
+    </div>
+
+    <div class="endpoint">
+        <div class="method">POST</div>
+        <span class="path">/analyze-url</span>
+        <p>Analyze a news article from a URL.</p>
+        <h3>Request Body</h3>
+        <pre><code>{
+  "url": "https://example.com/news-article"
+}</code></pre>
+        <h3>Response</h3>
+        <pre><code>{
+  "prediction": "REAL",
+  "confidence": 0.85,
+  "trust_score": 75,
+  "trust_level": "High Trust",
+  "factors": {
+    "source_credibility": 70,
+    "content_analysis": 80,
+    "language_analysis": 65,
+    "fact_verification": 85
+  },
+  "article": {
+    "title": "Example News Article",
+    "content": "The extracted content of the article...",
+    "source": "example.com",
+    "source_credibility": 65,
+    "extraction_method": "newspaper",
+    "url": "https://example.com/news-article"
+  }
+}</code></pre>
+    </div>
+
+    <h2>Example Usage</h2>
+    <p>Here's an example of how to use the API with curl:</p>
+    <pre><code>curl -X POST "http://localhost:8000/predict" \
+     -H "Content-Type: application/json" \
+     -d '{"text": "Scientists at MIT have developed a new type of battery that can store renewable energy for months without losing charge."}'</code></pre>
+
+    <p>Example of analyzing a URL:</p>
+    <pre><code>curl -X POST "http://localhost:8000/analyze-url" \
+     -H "Content-Type: application/json" \
+     -d '{"url": "https://www.bbc.com/news/science-environment-56837908"}'</code></pre>
+
+    <footer>
+        <p>Fake News Detector API &copy; 2025</p>
+    </footer>
+</body>
+</html>

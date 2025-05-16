@@ -1,0 +1,37 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY mlops/requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install additional packages for MLOps
+RUN pip install --no-cache-dir \
+    mlflow==2.11.1 \
+    schedule==1.2.1 \
+    evidently==0.7.5 \
+    scikit-learn==1.6.1 \
+    pandas==2.2.3 \
+    numpy==2.0.2 \
+    matplotlib==3.8.4 \
+    seaborn==0.13.2
+
+# Create necessary directories
+RUN mkdir -p /app/mlops/logs /app/model /app/data
+
+# Set environment variables
+ENV PYTHONPATH=/app
+ENV PYTHONUNBUFFERED=1
+
+# Default command
+CMD ["python", "/app/mlops/scheduled_retraining.py", "--deploy"]

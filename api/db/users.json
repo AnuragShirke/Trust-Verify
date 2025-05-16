@@ -1,0 +1,19 @@
+{
+  "c79893f7-ccc0-487b-b71a-83fd00477bb7": {
+    "email": "test@phonon.io",
+    "username": "anuragshirke011",
+    "hashed_password": "$2b$12$hQQlz3zrHMFMbKlA1yKwVuAjk6ecH0bZxppJusrml9LWi/G3SoctC",
+    "created_at": "2025-05-05T00:10:24.502409",
+    "last_login": "2025-05-10T15:02:20.067111",
+    "is_active": true
+  },
+  "5b3c9d68-0a7d-4c6e-9466-fb276327ed5f": {
+    "email": "anuragshirke011@gmail.com",
+    "username": "AnuragShirke",
+    "hashed_password": "$2b$12$UWRxbcQEKuJrpf6Sdb78BuvTbijWSvaJ1Kjma43L80Ok2dIGwmbme",
+    "created_at": "2025-05-10T16:02:23.853980",
+    "last_login": "2025-05-10T16:05:05.966339",
+    "is_active": true,
+    "is_admin": false
+  }
+}

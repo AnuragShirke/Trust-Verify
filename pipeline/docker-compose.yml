@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # Redis service
+  redis:
+    image: redis:alpine
+    container_name: pipeline-redis-server
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+
+  # Pipeline service
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pipeline-service
+    volumes:
+      - .:/app
+      - pipeline-data:/app/data
+      - pipeline-logs:/app/logs
+      - pipeline-results:/app/results
+    environment:
+      - REDIS_HOST=${REDIS_HOST:-redis}
+      - REDIS_PORT=${REDIS_PORT:-6379}
+      - REDIS_PASSWORD=${REDIS_PASSWORD:-}
+      - REDIS_URL=${REDIS_URL:-}
+      - API_BASE_URL=${API_BASE_URL:-http://host.docker.internal:8000}
+    depends_on:
+      - redis
+    restart: unless-stopped
+    # Add host.docker.internal to /etc/hosts to allow container to access host
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # Dashboard service
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: pipeline-dashboard
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - pipeline-logs:/app/logs
+    environment:
+      - REDIS_HOST=${REDIS_HOST:-redis}
+      - REDIS_PORT=${REDIS_PORT:-6379}
+      - REDIS_PASSWORD=${REDIS_PASSWORD:-}
+      - REDIS_URL=${REDIS_URL:-}
+      - HOST=0.0.0.0
+      - PORT=${PORT:-8080}
+      - API_BASE_URL=${API_BASE_URL:-http://host.docker.internal:8000}
+    depends_on:
+      - redis
+    command: ["python", "dashboard_server.py"]
+    restart: unless-stopped
+    # Add host.docker.internal to /etc/hosts to allow container to access host
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # Real-time dashboard with Server-Sent Events
+  realtime-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    container_name: pipeline-realtime-dashboard
+    ports:
+      - "8081:8081"
+    volumes:
+      - .:/app
+      - pipeline-logs:/app/logs
+    environment:
+      - REDIS_HOST=${REDIS_HOST:-redis}
+      - REDIS_PORT=${REDIS_PORT:-6379}
+      - REDIS_PASSWORD=${REDIS_PASSWORD:-}
+      - REDIS_URL=${REDIS_URL:-}
+      - HOST=0.0.0.0
+      - PORT=${PORT:-8081}
+    depends_on:
+      - redis
+    command: ["python", "realtime_dashboard.py"]
+    restart: unless-stopped
+    # Add host.docker.internal to /etc/hosts to allow container to access host
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  redis-data:
+  pipeline-data:
+  pipeline-logs:
+  pipeline-results:
