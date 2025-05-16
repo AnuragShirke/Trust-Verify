@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { cn } from '../lib/utils';
 import { ThemeToggle } from './ThemeToggle';
-import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { useAuth } from '@/context/AuthContext';
+import { Button } from './ui/button';
+import { Avatar, AvatarFallback } from './ui/avatar';
+import { useAuth } from '../context/AuthContext';
 
 const navItems = [
   { name: 'Home', path: '/' },
