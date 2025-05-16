@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/tooltip';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Info } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { cn } from "../utils.js";
 import {
   BarChart,
   Bar,
@@ -201,3 +201,4 @@ export default function FactorBreakdown({ factors }: FactorBreakdownProps) {
     </Card>
   );
 }
+

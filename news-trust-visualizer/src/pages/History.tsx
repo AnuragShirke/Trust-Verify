@@ -7,7 +7,7 @@ import { Separator } from '@/components/ui/separator';
 import { format } from 'date-fns';
 import TrustGauge from '@/components/TrustGauge';
 import { useAppContext } from '@/context/AppContext';
-import { cn } from '@/lib/utils';
+import { cn } from "../utils.js";
 
 const History = () => {
   const { history, setCurrentAnalysis, clearHistory } = useAppContext();
@@ -122,3 +122,4 @@ const History = () => {
 };
 
 export default History;
+

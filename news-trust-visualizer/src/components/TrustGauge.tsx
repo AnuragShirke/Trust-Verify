@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
-import { cn } from '@/lib/utils';
+import { cn } from "../utils.js";
 
 interface TrustGaugeProps {
   score: number;
@@ -72,3 +72,4 @@ export default function TrustGauge({
     </div>
   );
 }
+
