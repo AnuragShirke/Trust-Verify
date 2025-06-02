@@ -41,16 +41,28 @@ export const fetchUserAnalyses = async () => {
   }
 };
 
-// Password reset function
+// Password reset functions
 export const requestPasswordReset = async (email) => {
   try {
-    const response = await api.post('/auth/forgot-password', { email });
+    const response = await api.post('/forgot-password', { email });
     return response.data;
   } catch (error) {
     if (axios.isAxiosError(error) && error.response) {
       throw new Error(error.response.data.detail || 'Failed to request password reset');
     }
     throw new Error('Failed to request password reset. Please try again.');
+  }
+};
+
+export const resetPassword = async (token, new_password) => {
+  try {
+    const response = await api.post('/reset-password', { token, new_password });
+    return response.data;
+  } catch (error) {
+    if (axios.isAxiosError(error) && error.response) {
+      throw new Error(error.response.data.detail || 'Failed to reset password');
+    }
+    throw new Error('Failed to reset password. Please try again.');
   }
 };
 
