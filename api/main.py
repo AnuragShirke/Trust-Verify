@@ -70,7 +70,7 @@ app = FastAPI(
 # Default local origins + placeholder for production frontend URL
 origins = os.environ.get(
     "CORS_ORIGINS",
-    "http://localhost:5173,http://localhost:8080,https://trustverify.vercel.app"
+    "http://localhost:5173,http://localhost:8080,https://trustverify.vercel.app,https://trust-verify-sandy.vercel.app"
 ).split(",")
 app.add_middleware(
     CORSMiddleware,
