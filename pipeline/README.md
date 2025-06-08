@@ -93,6 +93,26 @@ docker-compose run --rm pipeline python redis_consumer.py
    - `REDIS_PASSWORD`: Redis server password (default: None)
    - `NEWSAPI_KEY`: API key for NewsAPI (optional)
 
+## Environment Variables Setup
+
+For security reasons, sensitive configuration should be stored in environment variables, not in the code. Follow these steps:
+
+1. Copy `.env.example` to create your `.env` file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Update the `.env` file with your actual configuration:
+   ```
+   REDIS_HOST=your-redis-host
+   REDIS_PORT=your-redis-port
+   REDIS_PASSWORD=your-redis-password
+   API_BASE_URL=your-api-url
+   PORT=8080
+   ```
+
+⚠️ IMPORTANT: Never commit the `.env` file to version control. It contains sensitive information.
+
 ### Running the Pipeline Manually
 
 #### Running Individual Components
