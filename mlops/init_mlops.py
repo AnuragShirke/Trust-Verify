@@ -11,6 +11,9 @@ import os
 import sys
 import mlflow
 from pathlib import Path
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from datetime import datetime
 
 # Add the parent directory to the path
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,6 +27,17 @@ from mlops.config import (
     MODEL_STAGE
 )
 from mlops.train_model import train_and_log_model
+
+app = FastAPI(title="Trust Verify MLOps Service")
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def setup_mlflow_server():
     """Set up and start the MLflow tracking server."""
@@ -62,6 +76,27 @@ def train_initial_model():
     else:
         print("Failed to train initial model.")
         return None
+
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for monitoring."""
+    try:
+        # Check MLflow connection
+        mlflow.set_tracking_uri(os.environ.get("MLFLOW_TRACKING_URI"))
+        mlflow.list_experiments()
+        
+        return {
+            "status": "healthy",
+            "mlflow_connected": True,
+            "timestamp": datetime.now().isoformat(),
+            "version": "1.0.0"
+        }
+    except Exception as e:
+        return {
+            "status": "unhealthy",
+            "error": str(e),
+            "timestamp": datetime.now().isoformat()
+        }
 
 def main():
     """Main function to initialize the MLOps environment."""

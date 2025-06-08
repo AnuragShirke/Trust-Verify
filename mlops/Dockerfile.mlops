@@ -32,6 +32,14 @@ RUN mkdir -p /app/mlops/logs /app/model /app/data
 # Set environment variables
 ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
+ENV PORT=10000
+
+# Copy start script
+COPY mlops/start.sh /app/start.sh
+RUN chmod +x /app/start.sh
+
+# Expose port
+EXPOSE ${PORT}
 
 # Default command
-CMD ["python", "/app/mlops/scheduled_retraining.py", "--deploy"]
+CMD ["/app/start.sh"]
