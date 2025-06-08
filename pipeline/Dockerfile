@@ -26,9 +26,7 @@ RUN mkdir -p /app/data /app/logs /app/results
 
 # Environment variables
 ENV PYTHONUNBUFFERED=1
-ENV REDIS_HOST=redis
-ENV REDIS_PORT=6379
-ENV API_BASE_URL=http://api:8000
+# Redis connection will be configured through environment variables at runtime
 
-# Command to run the pipeline
-CMD ["python", "run_pipeline.py", "--all"]
+# Command to run the pipeline with proper initialization
+CMD ["sh", "-c", "python redis_consumer.py & python dashboard_server.py"]

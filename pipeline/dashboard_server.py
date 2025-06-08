@@ -65,6 +65,32 @@ async def test():
     </html>
     """)
 
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for deployment monitoring."""
+    try:
+        # Check Redis connection
+        redis_client = redis.Redis(
+            host=REDIS_HOST,
+            port=REDIS_PORT,
+            password=REDIS_PASSWORD,
+            db=REDIS_DB,
+            decode_responses=True
+        )
+        redis_client.ping()
+        
+        return {
+            "status": "healthy",
+            "redis": "connected",
+            "timestamp": datetime.datetime.now().isoformat()
+        }
+    except Exception as e:
+        return {
+            "status": "unhealthy",
+            "error": str(e),
+            "timestamp": datetime.datetime.now().isoformat()
+        }, 500
+
 # Create a connection pool for Redis
 redis_pool = redis.ConnectionPool(
     host=REDIS_HOST,

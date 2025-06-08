@@ -57,6 +57,35 @@ def connect_to_redis() -> redis.Redis:
         logger.error(f"Failed to connect to Redis: {str(e)}")
         raise
 
+def connect_with_retry(max_retries=5, retry_delay=5):
+    """Connect to Redis with retry logic."""
+    for attempt in range(max_retries):
+        try:
+            client = redis.Redis(
+                host=REDIS_HOST,
+                port=REDIS_PORT,
+                db=REDIS_DB,
+                password=REDIS_PASSWORD,
+                decode_responses=True,
+                socket_timeout=5,
+                socket_connect_timeout=5,
+                socket_keepalive=True
+            )
+            # Test connection
+            client.ping()
+            logger.info(f"Successfully connected to Redis at {REDIS_HOST}:{REDIS_PORT}")
+            return client
+        except redis.ConnectionError as e:
+            if attempt < max_retries - 1:
+                logger.warning(f"Failed to connect to Redis (attempt {attempt + 1}/{max_retries}). Retrying in {retry_delay} seconds...")
+                time.sleep(retry_delay)
+            else:
+                logger.error(f"Failed to connect to Redis after {max_retries} attempts")
+                raise
+        except Exception as e:
+            logger.error(f"Unexpected error connecting to Redis: {str(e)}")
+            raise
+
 def setup_consumer_group(redis_client: redis.Redis) -> None:
     """Set up the consumer group if it doesn't exist."""
     try:
@@ -182,22 +211,32 @@ def main():
     """Main function to consume articles from Redis stream."""
     logger.info("Starting Redis consumer")
 
-    try:
-        # Connect to Redis
-        redis_client = connect_to_redis()
+    while True:
+        try:
+            # Connect to Redis with retry logic
+            redis_client = connect_with_retry()
 
-        # Set up the consumer group
-        setup_consumer_group(redis_client)
+            # Set up the consumer group
+            setup_consumer_group(redis_client)
 
-        # Main processing loop
-        logger.info(f"Listening for messages on stream '{REDIS_STREAM_NAME}'")
-        while True:
-            consume_messages(redis_client)
-            time.sleep(1)  # Small delay to avoid tight loop
-    except KeyboardInterrupt:
-        logger.info("Consumer stopped by user")
-    except Exception as e:
-        logger.error(f"Error in Redis consumer: {str(e)}")
+            # Main processing loop
+            logger.info(f"Listening for messages on stream '{REDIS_STREAM_NAME}'")
+            while True:
+                consume_messages(redis_client)
+                time.sleep(1)  # Small delay to avoid tight loop
+
+        except redis.ConnectionError as e:
+            logger.error(f"Redis connection lost: {str(e)}")
+            logger.info("Attempting to reconnect...")
+            time.sleep(5)  # Wait before reconnecting
+            continue
+        except KeyboardInterrupt:
+            logger.info("Consumer stopped by user")
+            break
+        except Exception as e:
+            logger.error(f"Unexpected error: {str(e)}")
+            time.sleep(5)  # Wait before retrying
+            continue
 
     logger.info("Redis consumer completed")
 
