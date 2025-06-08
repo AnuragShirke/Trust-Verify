@@ -57,13 +57,20 @@ class FeedbackInput(BaseModel):
             raise ValueError('Label must be 0 (FAKE) or 1 (REAL)')
         return v
 
-# Create the FastAPI app with metadata
+# Initialize FastAPI app
 app = FastAPI(
-    title="Fake News Detector API",
-    description="API for detecting fake news and calculating trust scores",
-    version="1.0.0",
-    docs_url="/docs",
-    redoc_url="/redoc",
+    title="Trust Verify API",
+    description="API for fake news detection and trust scoring",
+    version="1.0.0"
+)
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Update this with specific origins in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Enable CORS
@@ -852,3 +859,28 @@ def calculate_trust_score(text: str, model_confidence: float, url: str = None) -
 
     final_score = trust + domain_score + readability_score + sentiment_score
     return max(0, min(100, round(final_score, 2)))
+
+# Health check endpoint
+@app.get("/health")
+async def health_check():
+    """Health check endpoint for monitoring."""
+    try:
+        # Basic health check - can be expanded based on needs
+        return {
+            "status": "healthy",
+            "timestamp": datetime.now().isoformat(),
+            "version": "1.0.0",
+            "api_info": {
+                "title": app.title,
+                "description": app.description
+            }
+        }
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={
+                "status": "unhealthy",
+                "error": str(e),
+                "timestamp": datetime.now().isoformat()
+            }
+        )
