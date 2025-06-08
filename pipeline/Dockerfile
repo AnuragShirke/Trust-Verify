@@ -26,7 +26,14 @@ RUN mkdir -p /app/data /app/logs /app/results
 
 # Environment variables
 ENV PYTHONUNBUFFERED=1
-# Redis connection will be configured through environment variables at runtime
+ENV PORT=10000
 
-# Command to run the pipeline with proper initialization
-CMD ["sh", "-c", "python redis_consumer.py & python dashboard_server.py"]
+# Expose the port
+EXPOSE ${PORT}
+
+# Make start script executable
+COPY start_server.sh /app/
+RUN chmod +x /app/start_server.sh
+
+# Command to run the pipeline
+CMD ["/app/start_server.sh"]

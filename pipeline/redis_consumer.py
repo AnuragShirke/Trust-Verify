@@ -176,13 +176,13 @@ def save_result_to_database(result: Dict[str, Any]) -> bool:
 def consume_messages(redis_client: redis.Redis) -> None:
     """Consume messages from the Redis stream."""
     try:
-        # Read new messages
+        # Read new messages with shorter timeout
         messages = redis_client.xreadgroup(
             groupname=REDIS_CONSUMER_GROUP,
             consumername=REDIS_CONSUMER_NAME,
             streams={REDIS_STREAM_NAME: '>'},  # '>' means read new messages
             count=1,  # Process one message at a time
-            block=5000  # Block for 5 seconds if no messages
+            block=2000  # Block for 2 seconds if no messages, reduced from 5 seconds
         )
 
         if not messages:
