@@ -16,6 +16,7 @@ import uvicorn
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Dict, Any, Set
 
 # Configure logging
@@ -44,6 +45,15 @@ PORT = int(os.environ.get("PORT", 8080))
 
 # Create the FastAPI app
 app = FastAPI(title="Fake News Detector Dashboard")
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, specify your frontend URLs
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Add simple test endpoints
 @app.get("/ping")

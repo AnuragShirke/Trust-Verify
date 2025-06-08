@@ -27,13 +27,10 @@ RUN mkdir -p /app/data /app/logs /app/results
 # Environment variables
 ENV PYTHONUNBUFFERED=1
 ENV PORT=10000
+ENV WEB_CONCURRENCY=2
 
 # Expose the port
 EXPOSE ${PORT}
 
-# Make start script executable
-COPY start_server.sh /app/
-RUN chmod +x /app/start_server.sh
-
-# Command to run the pipeline
-CMD ["/app/start_server.sh"]
+# Command to run both services
+CMD ["sh", "-c", "python redis_consumer.py & gunicorn dashboard_server:app --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT --timeout 300 --keep-alive 120 --access-logfile - --error-logfile -"]
