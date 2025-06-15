@@ -6,7 +6,6 @@ import sys
 import time
 import logging
 import threading
-import schedule
 from datetime import datetime
 
 # Add project root to path
@@ -31,113 +30,133 @@ def check_for_drift():
     """Check if concept drift has been detected."""
     logger.info("Checking for concept drift...")
     drift_result = detect_drift()
-    if drift_result and drift_result.get("drift_detected", False):
-        logger.info("Concept drift detected. Triggering model retraining.")
+    
+    if drift_result is None:
+        logger.warning("Could not perform drift detection. Data files not found.")
+        return False
+    
+    if drift_result.get("drift_detected", False):
+        logger.info("Concept drift detected:")
+        for reason in drift_result.get("drift_reasons", []):
+            logger.info(f"- {reason}")
+        
+        # Log drift metrics
+        drift_metrics = drift_result.get("metrics", {})
+        if "data_drift" in drift_metrics:
+            logger.info(f"Data drift score: {drift_metrics['data_drift']['drift_score']:.3f}")
+            if "drifted_features" in drift_metrics["data_drift"]:
+                logger.info(f"Number of drifted features: {len(drift_metrics['data_drift']['drifted_features'])}")
+        
+        if "prediction_drift" in drift_metrics:
+            logger.info(f"Prediction drift: {drift_metrics['prediction_drift']:.3f}")
+        if "confidence_drift" in drift_metrics:
+            logger.info(f"Confidence drift: {drift_metrics['confidence_drift']:.3f}")
+            
+        logger.info("Drift report saved to: " + drift_result["report_path"])
         return True
+        
     logger.info("No significant drift detected.")
     return False
 
 def retrain_model(force_retrain=False, include_feedback=True):
     """Retrain the model if drift is detected or forced."""
-    if force_retrain:
-        logger.info("Forced retraining initiated.")
-        run_id, metrics = train_and_log_model(include_feedback=include_feedback)
-        return run_id, metrics
-    return None, None
+    try:
+        if force_retrain:
+            logger.info("Forced retraining initiated.")
+            run_id, metrics = train_and_log_model(include_feedback=include_feedback)
+            if run_id:
+                logger.info(f"Model retrained successfully. MLflow run ID: {run_id}")
+                if metrics:
+                    logger.info("Training metrics:")
+                    for metric_name, value in metrics.items():
+                        logger.info(f"- {metric_name}: {value:.3f}")
+            return run_id, metrics
+        return None, None
+    except Exception as e:
+        logger.error(f"Error during model retraining: {str(e)}")
+        return None, None
 
 def retraining_flow(force_retrain=False):
     """
     Flow for checking drift and retraining the model if necessary.
-
+    
     Args:
-        force_retrain: If True, retrain regardless of drift detection
-
+        force_retrain: If True, retrain regardless of drift detection.
+    
     Returns:
-        bool: True if retraining was performed, False otherwise
+        dict: Results of the retraining flow including:
+            - drift_detected (bool): Whether drift was detected
+            - retrained (bool): Whether model was retrained
+            - run_id (str): MLflow run ID if retrained, None otherwise
+            - metrics (dict): Training metrics if retrained, None otherwise
     """
-    logger.info("Starting retraining flow")
-
-    # Check for drift if not forcing retraining
-    drift_detected = False
-    if not force_retrain:
-        drift_detected = check_for_drift()
-
-    # Retrain if drift detected or forced
-    if drift_detected or force_retrain:
-        run_id, metrics = retrain_model(force_retrain=True, include_feedback=True)
-        if run_id:
-            logger.info(f"Model retrained successfully. Run ID: {run_id}")
-            logger.info("Metrics:")
-            for key, value in metrics.items():
-                logger.info(f"  {key}: {value:.4f}")
-            return True
-        else:
-            logger.error("Model retraining failed.")
-            return False
-
-    logger.info("No retraining needed.")
-    return False
+    result = {
+        "drift_detected": False,
+        "retrained": False,
+        "run_id": None,
+        "metrics": None,
+        "timestamp": datetime.now().isoformat()
+    }
+    
+    try:
+        # Check for drift unless force_retrain is True
+        if not force_retrain:
+            result["drift_detected"] = check_for_drift()
+        
+        # Retrain if drift detected or forced
+        if result["drift_detected"] or force_retrain:
+            run_id, metrics = retrain_model(force_retrain=True, include_feedback=True)
+            result["retrained"] = run_id is not None
+            result["run_id"] = run_id
+            result["metrics"] = metrics
+    except Exception as e:
+        logger.error(f"Error in retraining flow: {str(e)}")
+    
+    return result
 
 def run_scheduler():
-    """Run the scheduler in a separate thread."""
-    stop_event = threading.Event()
+    """Run the scheduler indefinitely."""
+    logger.info("Starting retraining scheduler...")
+    
+    def run_scheduled_job():
+        logger.info("Running scheduled retraining check...")
+        result = retraining_flow()
+        if result["retrained"]:
+            logger.info("Scheduled retraining completed successfully.")
+            logger.info(f"MLflow run ID: {result['run_id']}")
+        else:
+            logger.info("No retraining needed.")
+    
+    schedule = RETRAINING_SCHEDULE
+    logger.info(f"Scheduler started. Will run at {schedule}")
+    
+    while True:
+        # Check current time
+        now = datetime.now()
+        scheduled_time = datetime.strptime(schedule, "%H:%M").time()
+        current_time = now.time()
+        
+        if current_time.hour == scheduled_time.hour and current_time.minute == scheduled_time.minute:
+            run_scheduled_job()
+            # Sleep for 60 seconds to avoid running multiple times in the same minute
+            time.sleep(60)
+        else:
+            # Sleep for 30 seconds before checking again
+            time.sleep(30)
 
-    def job():
-        logger.info(f"Running scheduled retraining at {datetime.now()}")
-        retraining_flow(force_retrain=False)
-
-    # Parse the cron schedule and convert to schedule format
-    # For simplicity, we'll just schedule it to run daily at midnight
-    schedule.every().day.at("00:00").do(job)
-
-    logger.info(f"Scheduler started. Will run at 00:00 daily.")
-
-    while not stop_event.is_set():
-        schedule.run_pending()
-        time.sleep(60)  # Check every minute
-
-    logger.info("Scheduler stopped.")
-
-def create_deployment():
-    """Create a scheduled retraining job."""
-    # Create logs directory if it doesn't exist
-    os.makedirs(os.path.join(os.path.dirname(__file__), 'logs'), exist_ok=True)
-
-    # Start the scheduler in a background thread
-    scheduler_thread = threading.Thread(target=run_scheduler)
-    scheduler_thread.daemon = True
+def start_scheduler():
+    """Start the scheduler in a separate thread."""
+    scheduler_thread = threading.Thread(target=run_scheduler, daemon=True)
     scheduler_thread.start()
-
-    logger.info("Retraining scheduler started in background thread.")
     return scheduler_thread
 
 if __name__ == "__main__":
-    import argparse
-
-    parser = argparse.ArgumentParser(description="Fake News Detector Model Retraining")
-    parser.add_argument("--force", action="store_true", help="Force model retraining")
-    parser.add_argument("--deploy", action="store_true", help="Create a scheduled deployment")
-    parser.add_argument("--run-once", action="store_true", help="Run the retraining flow once and exit")
-
-    args = parser.parse_args()
-
-    # Create logs directory if it doesn't exist
-    os.makedirs(os.path.join(os.path.dirname(__file__), 'logs'), exist_ok=True)
-
-    if args.deploy:
-        # Start the scheduler in a background thread
-        scheduler_thread = create_deployment()
-
-        try:
-            # Keep the main thread alive
-            while True:
-                time.sleep(1)
-        except KeyboardInterrupt:
-            logger.info("Scheduler stopped by user.")
-            sys.exit(0)
-    elif args.run_once:
-        # Run the retraining flow once
-        retraining_flow(force_retrain=False)
-    else:
-        # Run with force flag
-        retraining_flow(force_retrain=args.force)
+    # Run the scheduler
+    scheduler_thread = start_scheduler()
+    try:
+        # Keep the main thread alive
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        logger.info("Scheduler stopped by user.")
+        sys.exit(0)

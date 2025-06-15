@@ -1,0 +1,5008 @@
+{
+  "data_drift": {
+    "drift_by_feature": {
+      "000": {
+        "drift_detected": false,
+        "drift_score": 0.9989814697412408,
+        "statistic": 0.004397112012297422
+      },
+      "10": {
+        "drift_detected": false,
+        "drift_score": 0.9591765149596517,
+        "statistic": 0.005960661550354129
+      },
+      "100": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008891727495501378
+      },
+      "11": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007795937295440591
+      },
+      "12": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015851367135073513
+      },
+      "13": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010021589655666574
+      },
+      "14": {
+        "drift_detected": false,
+        "drift_score": 0.9999999944614986,
+        "statistic": 0.002812964284711117
+      },
+      "15": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019228862565121574
+      },
+      "16": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016135661834029147
+      },
+      "18": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018362306280444995
+      },
+      "20": {
+        "drift_detected": false,
+        "drift_score": 0.9999999975670603,
+        "statistic": 0.0027586754682074055
+      },
+      "2012": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009479631571431835
+      },
+      "2013": {
+        "drift_detected": false,
+        "drift_score": 0.9999995290286194,
+        "statistic": 0.003175069543691844
+      },
+      "2014": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007512665685369679
+      },
+      "2015": {
+        "drift_detected": false,
+        "drift_score": 0.9812493467503642,
+        "statistic": 0.005486794681748397
+      },
+      "2016": {
+        "drift_detected": false,
+        "drift_score": 0.7189641158451557,
+        "statistic": 0.008180820233300135
+      },
+      "2017": {
+        "drift_detected": false,
+        "drift_score": 0.9999989272928468,
+        "statistic": 0.003259105444562871
+      },
+      "24": {
+        "drift_detected": false,
+        "drift_score": 0.9999989341597199,
+        "statistic": 0.0032584233853069078
+      },
+      "25": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019490308279003221
+      },
+      "30": {
+        "drift_detected": false,
+        "drift_score": 0.9865079007394446,
+        "statistic": 0.005319445242763843
+      },
+      "50": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001169499103743199
+      },
+      "able": {
+        "drift_detected": false,
+        "drift_score": 0.9709769680512066,
+        "statistic": 0.005737290244301807
+      },
+      "about": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999994644,
+        "statistic": 0.0023392896328047197
+      },
+      "access": {
+        "drift_detected": false,
+        "drift_score": 0.9592640632757959,
+        "statistic": 0.005959167220529693
+      },
+      "according": {
+        "drift_detected": false,
+        "drift_score": 0.952126605579123,
+        "statistic": 0.006075033586767864
+      },
+      "account": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007249824850282804
+      },
+      "accused": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015037577434652283
+      },
+      "across": {
+        "drift_detected": false,
+        "drift_score": 0.9984556578753436,
+        "statistic": 0.0045126156470221
+      },
+      "act": {
+        "drift_detected": false,
+        "drift_score": 0.999999999999996,
+        "statistic": 0.002168827523397532
+      },
+      "action": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001307907528390273
+      },
+      "actions": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013082051542474549
+      },
+      "actually": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011976774518216438
+      },
+      "added": {
+        "drift_detected": false,
+        "drift_score": 0.9802268092786073,
+        "statistic": 0.005515394666457896
+      },
+      "adding": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999201107,
+        "statistic": 0.002562915160943424
+      },
+      "address": {
+        "drift_detected": false,
+        "drift_score": 0.9999999258082268,
+        "statistic": 0.0030080735354126587
+      },
+      "administration": {
+        "drift_detected": false,
+        "drift_score": 0.9999999965156822,
+        "statistic": 0.002781986393413871
+      },
+      "adviser": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0004176403837612419
+      },
+      "african": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999924943,
+        "statistic": 0.0024495724139521613
+      },
+      "after": {
+        "drift_detected": false,
+        "drift_score": 0.9999999970843556,
+        "statistic": 0.002770347982291921
+      },
+      "again": {
+        "drift_detected": false,
+        "drift_score": 0.4450157025883801,
+        "statistic": 0.010164884104801208
+      },
+      "against": {
+        "drift_detected": false,
+        "drift_score": 0.8460814386335536,
+        "statistic": 0.007213802820761561
+      },
+      "agencies": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009745665683943416
+      },
+      "agency": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018939080389426266
+      },
+      "agenda": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018361686226575635
+      },
+      "ago": {
+        "drift_detected": false,
+        "drift_score": 0.9759112396387205,
+        "statistic": 0.005626052580196106
+      },
+      "agreed": {
+        "drift_detected": false,
+        "drift_score": 0.9999999739027686,
+        "statistic": 0.0029247010921815697
+      },
+      "agreement": {
+        "drift_detected": false,
+        "drift_score": 0.999780984948507,
+        "statistic": 0.004038370545556336
+      },
+      "ahead": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0001391927927913983
+      },
+      "aid": {
+        "drift_detected": false,
+        "drift_score": 0.999834668338386,
+        "statistic": 0.0039820045485912114
+      },
+      "air": {
+        "drift_detected": false,
+        "drift_score": 0.9999995434665464,
+        "statistic": 0.0031720188786561465
+      },
+      "al": {
+        "drift_detected": false,
+        "drift_score": 0.9999667771585296,
+        "statistic": 0.0037009310294859876
+      },
+      "all": {
+        "drift_detected": false,
+        "drift_score": 0.7592432540563482,
+        "statistic": 0.007890374599964445
+      },
+      "allegations": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001893250781841438
+      },
+      "alleged": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015036244318833436
+      },
+      "allies": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018656335825143477
+      },
+      "allow": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008908065914950969
+      },
+      "allowed": {
+        "drift_detected": false,
+        "drift_score": 0.9256281221619959,
+        "statistic": 0.006432662056814142
+      },
+      "almost": {
+        "drift_detected": false,
+        "drift_score": 0.9933312061142617,
+        "statistic": 0.005009331500702152
+      },
+      "along": {
+        "drift_detected": false,
+        "drift_score": 0.9941484981063172,
+        "statistic": 0.004957808124454233
+      },
+      "already": {
+        "drift_detected": false,
+        "drift_score": 0.9999999240069939,
+        "statistic": 0.0030100732091402627
+      },
+      "also": {
+        "drift_detected": false,
+        "drift_score": 0.9999999941754752,
+        "statistic": 0.0028163931826069577
+      },
+      "although": {
+        "drift_detected": false,
+        "drift_score": 0.999999812297018,
+        "statistic": 0.0030885224246511855
+      },
+      "always": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001698460858882589
+      },
+      "am": {
+        "drift_detected": false,
+        "drift_score": 0.9906219753254707,
+        "statistic": 0.005152049299739003
+      },
+      "ambassador": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019769549538924958
+      },
+      "america": {
+        "drift_detected": false,
+        "drift_score": 0.7639303923286085,
+        "statistic": 0.007855943008616695
+      },
+      "american": {
+        "drift_detected": false,
+        "drift_score": 0.9541457214584456,
+        "statistic": 0.0060433984383695405
+      },
+      "americans": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015830874354701985
+      },
+      "among": {
+        "drift_detected": false,
+        "drift_score": 0.5833259591308583,
+        "statistic": 0.009134540590617357
+      },
+      "an": {
+        "drift_detected": false,
+        "drift_score": 0.5402698269813597,
+        "statistic": 0.009443603341371176
+      },
+      "and": {
+        "drift_detected": false,
+        "drift_score": 0.3375691246318884,
+        "statistic": 0.011089260412766144
+      },
+      "announced": {
+        "drift_detected": false,
+        "drift_score": 0.9988553752893539,
+        "statistic": 0.004428570445343172
+      },
+      "another": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008858988651215816
+      },
+      "anti": {
+        "drift_detected": false,
+        "drift_score": 0.9927700326416775,
+        "statistic": 0.005042026941216582
+      },
+      "any": {
+        "drift_detected": false,
+        "drift_score": 0.9999985992244477,
+        "statistic": 0.0032878356405847686
+      },
+      "anyone": {
+        "drift_detected": false,
+        "drift_score": 0.8125940772666538,
+        "statistic": 0.007486521113981404
+      },
+      "anything": {
+        "drift_detected": false,
+        "drift_score": 0.999999999381722,
+        "statistic": 0.00267489378942265
+      },
+      "appeared": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007236586700178904
+      },
+      "april": {
+        "drift_detected": false,
+        "drift_score": 0.999998615850708,
+        "statistic": 0.0032865335274597784
+      },
+      "arabia": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018933375893831483
+      },
+      "are": {
+        "drift_detected": false,
+        "drift_score": 0.9655088086046215,
+        "statistic": 0.005846881665385384
+      },
+      "area": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999983,
+        "statistic": 0.0021422458140318845
+      },
+      "areas": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018942273666852083
+      },
+      "armed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006960321698828986
+      },
+      "army": {
+        "drift_detected": false,
+        "drift_score": 0.999992881991399,
+        "statistic": 0.0034812831469172023
+      },
+      "around": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001916868633713098
+      },
+      "arrested": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015323670289827396
+      },
+      "article": {
+        "drift_detected": false,
+        "drift_score": 0.9999999990319413,
+        "statistic": 0.002701463097711021
+      },
+      "as": {
+        "drift_detected": false,
+        "drift_score": 0.27406692457168236,
+        "statistic": 0.011730535625474103
+      },
+      "asked": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001725733928312212
+      },
+      "at": {
+        "drift_detected": false,
+        "drift_score": 0.29762733988128,
+        "statistic": 0.011481552994361044
+      },
+      "attack": {
+        "drift_detected": false,
+        "drift_score": 0.9999986001793341,
+        "statistic": 0.0032877612341205564
+      },
+      "attacks": {
+        "drift_detected": false,
+        "drift_score": 0.9975569938729566,
+        "statistic": 0.004651520114764551
+      },
+      "attempt": {
+        "drift_detected": false,
+        "drift_score": 0.9984766535896555,
+        "statistic": 0.004508665903876441
+      },
+      "attorney": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017820596217758
+      },
+      "august": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0020058990684992395
+      },
+      "authorities": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014480986079109526
+      },
+      "away": {
+        "drift_detected": false,
+        "drift_score": 0.7219024144362814,
+        "statistic": 0.008159899615758803
+      },
+      "back": {
+        "drift_detected": false,
+        "drift_score": 0.24967595874143522,
+        "statistic": 0.012005169885149214
+      },
+      "backed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011987966490552004
+      },
+      "bad": {
+        "drift_detected": false,
+        "drift_score": 0.9917586434355079,
+        "statistic": 0.005096467670918314
+      },
+      "ban": {
+        "drift_detected": false,
+        "drift_score": 0.9641240728941621,
+        "statistic": 0.005872827819535242
+      },
+      "bank": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010581343285941402
+      },
+      "barack": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007205180971712188
+      },
+      "based": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007238849896801236
+      },
+      "be": {
+        "drift_detected": false,
+        "drift_score": 0.7094316303334696,
+        "statistic": 0.008248474310951215
+      },
+      "became": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999994557,
+        "statistic": 0.0023399251880205085
+      },
+      "because": {
+        "drift_detected": false,
+        "drift_score": 0.9994003147601366,
+        "statistic": 0.0042625727237930455
+      },
+      "become": {
+        "drift_detected": false,
+        "drift_score": 0.9999999943160166,
+        "statistic": 0.002814728337968475
+      },
+      "been": {
+        "drift_detected": false,
+        "drift_score": 0.5392006479256909,
+        "statistic": 0.009451378816888845
+      },
+      "before": {
+        "drift_detected": false,
+        "drift_score": 0.8429182907418042,
+        "statistic": 0.007240452736052783
+      },
+      "began": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999961565,
+        "statistic": 0.002420141557058164
+      },
+      "behind": {
+        "drift_detected": false,
+        "drift_score": 0.8976764526947323,
+        "statistic": 0.006739539117679438
+      },
+      "being": {
+        "drift_detected": false,
+        "drift_score": 0.9982719648330074,
+        "statistic": 0.004545456800195802
+      },
+      "believe": {
+        "drift_detected": false,
+        "drift_score": 0.9998788611527594,
+        "statistic": 0.0039223956698909435
+      },
+      "below": {
+        "drift_detected": false,
+        "drift_score": 0.9991648358410842,
+        "statistic": 0.004345170099687934
+      },
+      "bernie": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006124086048348021
+      },
+      "best": {
+        "drift_detected": false,
+        "drift_score": 0.9995813468151534,
+        "statistic": 0.00417823299652631
+      },
+      "better": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011969922922964171
+      },
+      "between": {
+        "drift_detected": false,
+        "drift_score": 0.9997088604349904,
+        "statistic": 0.004098016627488543
+      },
+      "big": {
+        "drift_detected": false,
+        "drift_score": 0.9999999620886277,
+        "statistic": 0.002953688610559113
+      },
+      "biggest": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019194294561922787
+      },
+      "bill": {
+        "drift_detected": false,
+        "drift_score": 0.9981711575836741,
+        "statistic": 0.004562309864356351
+      },
+      "billion": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015035965294593057
+      },
+      "black": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999550606,
+        "statistic": 0.0025338935396029827
+      },
+      "board": {
+        "drift_detected": false,
+        "drift_score": 0.9793531117745065,
+        "statistic": 0.00553903732048433
+      },
+      "border": {
+        "drift_detected": false,
+        "drift_score": 0.9999999990757925,
+        "statistic": 0.0026986790558389817
+      },
+      "both": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014488705749777786
+      },
+      "brexit": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017822301365897353
+      },
+      "bring": {
+        "drift_detected": false,
+        "drift_score": 0.9999997359982026,
+        "statistic": 0.0031197700393815753
+      },
+      "britain": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010868738254241617
+      },
+      "british": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019492075432528955
+      },
+      "brought": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018110595412308417
+      },
+      "budget": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015317159724203
+      },
+      "building": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010021124615263721
+      },
+      "bush": {
+        "drift_detected": false,
+        "drift_score": 0.9999942781220342,
+        "statistic": 0.0034532691131140547
+      },
+      "business": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014207015277073465
+      },
+      "but": {
+        "drift_detected": false,
+        "drift_score": 0.9582759726474911,
+        "statistic": 0.005975917975801881
+      },
+      "by": {
+        "drift_detected": false,
+        "drift_score": 0.9962721436616574,
+        "statistic": 0.004792095627683901
+      },
+      "california": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018664365522748083
+      },
+      "call": {
+        "drift_detected": false,
+        "drift_score": 0.9999999990577108,
+        "statistic": 0.00269984165684356
+      },
+      "called": {
+        "drift_detected": false,
+        "drift_score": 0.9999887940369406,
+        "statistic": 0.0035418066050741936
+      },
+      "calling": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00186497632541327
+      },
+      "calls": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999998737,
+        "statistic": 0.0022849295101059486
+      },
+      "came": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001615156621576963
+      },
+      "campaign": {
+        "drift_detected": false,
+        "drift_score": 0.9959736562762261,
+        "statistic": 0.0048191795806835636
+      },
+      "can": {
+        "drift_detected": false,
+        "drift_score": 0.9973676926695464,
+        "statistic": 0.004675410790338619
+      },
+      "candidate": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999958807,
+        "statistic": 0.0024231395175149384
+      },
+      "candidates": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016967557107425701
+      },
+      "cannot": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00172632607975709
+      },
+      "capital": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019483983729537968
+      },
+      "care": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010877667029955962
+      },
+      "carolina": {
+        "drift_detected": false,
+        "drift_score": 0.9999999998700665,
+        "statistic": 0.0025882474617630047
+      },
+      "case": {
+        "drift_detected": false,
+        "drift_score": 0.9999810605998111,
+        "statistic": 0.003615977448888863
+      },
+      "cases": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999997385,
+        "statistic": 0.0023118181461369014
+      },
+      "center": {
+        "drift_detected": false,
+        "drift_score": 0.9995280777408906,
+        "statistic": 0.004205766488580953
+      },
+      "central": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999997355,
+        "statistic": 0.002312255284114606
+      },
+      "century": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016983182464925806
+      },
+      "chairman": {
+        "drift_detected": false,
+        "drift_score": 0.999989148015553,
+        "statistic": 0.00353741972395083
+      },
+      "change": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008353086699466328
+      },
+      "charges": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011970449968753405
+      },
+      "chief": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013116433529511973
+      },
+      "child": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011691301716910685
+      },
+      "children": {
+        "drift_detected": false,
+        "drift_score": 0.9999999943831832,
+        "statistic": 0.0028139191676693764
+      },
+      "china": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999998,
+        "statistic": 0.0020863138547749793
+      },
+      "chinese": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006957407445643549
+      },
+      "cia": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999997422,
+        "statistic": 0.002311291100348223
+      },
+      "citizens": {
+        "drift_detected": false,
+        "drift_score": 0.8893460546086374,
+        "statistic": 0.00682249302454907
+      },
+      "city": {
+        "drift_detected": false,
+        "drift_score": 0.9999978109961971,
+        "statistic": 0.0033376755705782912
+      },
+      "civil": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016442557496509913
+      },
+      "claim": {
+        "drift_detected": false,
+        "drift_score": 0.9999999739249769,
+        "statistic": 0.002924635986525148
+      },
+      "claimed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001279192833715026
+      },
+      "claims": {
+        "drift_detected": false,
+        "drift_score": 0.999749312852684,
+        "statistic": 0.0040663349750499345
+      },
+      "class": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009746626767440647
+      },
+      "clear": {
+        "drift_detected": false,
+        "drift_score": 0.9999999884702923,
+        "statistic": 0.0028641776340244673
+      },
+      "clearly": {
+        "drift_detected": false,
+        "drift_score": 0.9999998575388059,
+        "statistic": 0.0030639403890131423
+      },
+      "climate": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010580010170123666
+      },
+      "clinton": {
+        "drift_detected": false,
+        "drift_score": 0.999999999422069,
+        "statistic": 0.002670962647892905
+      },
+      "close": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013645680509432045
+      },
+      "cnn": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009184919967477612
+      },
+      "co": {
+        "drift_detected": false,
+        "drift_score": 0.9999531948065647,
+        "statistic": 0.00375584920066685
+      },
+      "coalition": {
+        "drift_detected": false,
+        "drift_score": 0.9999989341597199,
+        "statistic": 0.0032584233853069078
+      },
+      "college": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008074248474558843
+      },
+      "com": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001812767789640013
+      },
+      "come": {
+        "drift_detected": false,
+        "drift_score": 0.9999982304874229,
+        "statistic": 0.003313639182344841
+      },
+      "comes": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999920463,
+        "statistic": 0.002452173539932767
+      },
+      "comey": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015308664986196652
+      },
+      "coming": {
+        "drift_detected": false,
+        "drift_score": 0.9979576956424996,
+        "statistic": 0.004595690464396229
+      },
+      "comment": {
+        "drift_detected": false,
+        "drift_score": 0.9993292224008478,
+        "statistic": 0.0042899636034580135
+      },
+      "comments": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011135423423316304
+      },
+      "commission": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999755,
+        "statistic": 0.002227552825334378
+      },
+      "committee": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999767,
+        "statistic": 0.002225897281504019
+      },
+      "community": {
+        "drift_detected": false,
+        "drift_score": 0.9996371628256367,
+        "statistic": 0.00414605840126181
+      },
+      "companies": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012531288693299336
+      },
+      "company": {
+        "drift_detected": false,
+        "drift_score": 0.998982014538442,
+        "statistic": 0.004396969399907524
+      },
+      "concerns": {
+        "drift_detected": false,
+        "drift_score": 0.99971852681134,
+        "statistic": 0.004090799200452966
+      },
+      "conference": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009191182511554263
+      },
+      "confirmed": {
+        "drift_detected": false,
+        "drift_score": 0.9999999944354221,
+        "statistic": 0.0028132836124536986
+      },
+      "conflict": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999895,
+        "statistic": 0.0021996255990728297
+      },
+      "congress": {
+        "drift_detected": false,
+        "drift_score": 0.9999836258564611,
+        "statistic": 0.0035949328205736597
+      },
+      "congressional": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999447,
+        "statistic": 0.0022554893524039388
+      },
+      "conservative": {
+        "drift_detected": false,
+        "drift_score": 0.991742197826004,
+        "statistic": 0.0050973109441802
+      },
+      "conservatives": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999746262,
+        "statistic": 0.002506019017920247
+      },
+      "constitution": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014487868677055538
+      },
+      "continue": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00122754854696272
+      },
+      "continued": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010580754234765788
+      },
+      "control": {
+        "drift_detected": false,
+        "drift_score": 0.9999912462365274,
+        "statistic": 0.003508475609343975
+      },
+      "convention": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010586706751909425
+      },
+      "cost": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999435,
+        "statistic": 0.0022562489183935996
+      },
+      "could": {
+        "drift_detected": false,
+        "drift_score": 0.9999999878121862,
+        "statistic": 0.0028681707809411483
+      },
+      "council": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018379140742990074
+      },
+      "countries": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018372227142349207
+      },
+      "country": {
+        "drift_detected": false,
+        "drift_score": 0.848909608807365,
+        "statistic": 0.007189791234682885
+      },
+      "county": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008917242712211948
+      },
+      "course": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011972155116892758
+      },
+      "court": {
+        "drift_detected": false,
+        "drift_score": 0.9794362450335454,
+        "statistic": 0.005536817527633242
+      },
+      "crime": {
+        "drift_detected": false,
+        "drift_score": 0.9999999996420772,
+        "statistic": 0.00264354386580401
+      },
+      "criminal": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011412680510857198
+      },
+      "crisis": {
+        "drift_detected": false,
+        "drift_score": 0.9975603072517731,
+        "statistic": 0.004651089177325596
+      },
+      "crowd": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011425112590931485
+      },
+      "cruz": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001308211354786093
+      },
+      "current": {
+        "drift_detected": false,
+        "drift_score": 0.9999963229777744,
+        "statistic": 0.0033985772615953147
+      },
+      "cut": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012802531258311323
+      },
+      "daily": {
+        "drift_detected": false,
+        "drift_score": 0.9987348747445801,
+        "statistic": 0.004456113238205939
+      },
+      "data": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0020319506318070557
+      },
+      "david": {
+        "drift_detected": false,
+        "drift_score": 0.9999999739957155,
+        "statistic": 0.0029244282684790512
+      },
+      "day": {
+        "drift_detected": false,
+        "drift_score": 0.9857358840078524,
+        "statistic": 0.0053466036022277175
+      },
+      "days": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014483032256876749
+      },
+      "deal": {
+        "drift_detected": false,
+        "drift_score": 0.8863459992507482,
+        "statistic": 0.006851629355855149
+      },
+      "death": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999999,
+        "statistic": 0.0020596174354434726
+      },
+      "debate": {
+        "drift_detected": false,
+        "drift_score": 0.9802829661514132,
+        "statistic": 0.0055138507323239105
+      },
+      "debt": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018933964945007098
+      },
+      "decades": {
+        "drift_detected": false,
+        "drift_score": 0.9057990079255029,
+        "statistic": 0.006655388506842663
+      },
+      "december": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013098048932295159
+      },
+      "decided": {
+        "drift_detected": false,
+        "drift_score": 0.9979833426919165,
+        "statistic": 0.004591830629061433
+      },
+      "decision": {
+        "drift_detected": false,
+        "drift_score": 0.9997151697266782,
+        "statistic": 0.004093329020238623
+      },
+      "declined": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006405187469877838
+      },
+      "defense": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017795856068384408
+      },
+      "democrat": {
+        "drift_detected": false,
+        "drift_score": 0.9781453573714622,
+        "statistic": 0.005570619764303841
+      },
+      "democratic": {
+        "drift_detected": false,
+        "drift_score": 0.763959023215796,
+        "statistic": 0.007855732190301223
+      },
+      "democrats": {
+        "drift_detected": false,
+        "drift_score": 0.9133706117366157,
+        "statistic": 0.006573559997745448
+      },
+      "denied": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014752290649506783
+      },
+      "department": {
+        "drift_detected": false,
+        "drift_score": 0.9999999914115774,
+        "statistic": 0.0028432694175604123
+      },
+      "deputy": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001390734324216547
+      },
+      "described": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013627202904133995
+      },
+      "despite": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999953,
+        "statistic": 0.002174039076166867
+      },
+      "details": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012234623919656906
+      },
+      "did": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012455177080874513
+      },
+      "didn": {
+        "drift_detected": false,
+        "drift_score": 0.9999976918683653,
+        "statistic": 0.003343745897956163
+      },
+      "different": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001893380993153948
+      },
+      "director": {
+        "drift_detected": false,
+        "drift_score": 0.9984547960110965,
+        "statistic": 0.004512776861028134
+      },
+      "district": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006125140139925378
+      },
+      "do": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999754,
+        "statistic": 0.0022277202398789386
+      },
+      "documents": {
+        "drift_detected": false,
+        "drift_score": 0.9999999919572569,
+        "statistic": 0.002838671718121577
+      },
+      "does": {
+        "drift_detected": false,
+        "drift_score": 0.9963540074839218,
+        "statistic": 0.0047843759570144195
+      },
+      "doesn": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999851275,
+        "statistic": 0.002480785925719653
+      },
+      "doing": {
+        "drift_detected": false,
+        "drift_score": 0.9995265194855417,
+        "statistic": 0.004206532255109252
+      },
+      "dollars": {
+        "drift_detected": false,
+        "drift_score": 0.9975644737416335,
+        "statistic": 0.0046505466301901555
+      },
+      "don": {
+        "drift_detected": false,
+        "drift_score": 0.9484742191758592,
+        "statistic": 0.006130267985422044
+      },
+      "donald": {
+        "drift_detected": false,
+        "drift_score": 0.9994041370536422,
+        "statistic": 0.004261025689389908
+      },
+      "done": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007492947972334019
+      },
+      "down": {
+        "drift_detected": false,
+        "drift_score": 0.9987157576500462,
+        "statistic": 0.004460286200744568
+      },
+      "due": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017820565215065365
+      },
+      "during": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999998,
+        "statistic": 0.002090210893341937
+      },
+      "each": {
+        "drift_detected": false,
+        "drift_score": 0.9999970950424563,
+        "statistic": 0.0033704857210584693
+      },
+      "earlier": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001555907374120813
+      },
+      "early": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011974697337755469
+      },
+      "east": {
+        "drift_detected": false,
+        "drift_score": 0.9999999738837192,
+        "statistic": 0.0029247568970296456
+      },
+      "economic": {
+        "drift_detected": false,
+        "drift_score": 0.9995896336230294,
+        "statistic": 0.0041736911019355505
+      },
+      "economy": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011987067412443375
+      },
+      "education": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013911032562687886
+      },
+      "effort": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010579855156656048
+      },
+      "efforts": {
+        "drift_detected": false,
+        "drift_score": 0.9979861492269357,
+        "statistic": 0.004591405892161116
+      },
+      "either": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999998751,
+        "statistic": 0.0022845109737443803
+      },
+      "elect": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018944443855393178
+      },
+      "elected": {
+        "drift_detected": false,
+        "drift_score": 0.9999891504816558,
+        "statistic": 0.0035373887212573063
+      },
+      "election": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017266702096544462
+      },
+      "elections": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008646093155281198
+      },
+      "else": {
+        "drift_detected": false,
+        "drift_score": 0.9772044656702307,
+        "statistic": 0.005594411231258922
+      },
+      "email": {
+        "drift_detected": false,
+        "drift_score": 0.99994336293714,
+        "statistic": 0.0037875029506813096
+      },
+      "emails": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018364569477067327
+      },
+      "end": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005250988195352191
+      },
+      "energy": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013373166833987593
+      },
+      "enforcement": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008086494538472877
+      },
+      "enough": {
+        "drift_detected": false,
+        "drift_score": 0.9995269236529037,
+        "statistic": 0.004206333837871168
+      },
+      "entire": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018948381197461117
+      },
+      "especially": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014738215426679524
+      },
+      "eu": {
+        "drift_detected": false,
+        "drift_score": 0.999470943041712,
+        "statistic": 0.0042325683170703066
+      },
+      "europe": {
+        "drift_detected": false,
+        "drift_score": 0.9999838980196385,
+        "statistic": 0.0035925332121004017
+      },
+      "european": {
+        "drift_detected": false,
+        "drift_score": 0.972296692335705,
+        "statistic": 0.005708851473598342
+      },
+      "even": {
+        "drift_detected": false,
+        "drift_score": 0.9999990157614345,
+        "statistic": 0.0032499999534959523
+      },
+      "event": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007239965993764974
+      },
+      "ever": {
+        "drift_detected": false,
+        "drift_score": 0.9999993676832718,
+        "statistic": 0.0032043825903506074
+      },
+      "every": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999994237,
+        "statistic": 0.0023421542816796093
+      },
+      "everyone": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011970511974139786
+      },
+      "everything": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0020027801975379678
+      },
+      "evidence": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018376567519433618
+      },
+      "executive": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999997607,
+        "statistic": 0.0023084884568601582
+      },
+      "expected": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007521377442230026
+      },
+      "face": {
+        "drift_detected": false,
+        "drift_score": 0.9999998140759463,
+        "statistic": 0.003087663650042538
+      },
+      "facebook": {
+        "drift_detected": false,
+        "drift_score": 0.9998343126560023,
+        "statistic": 0.003982426185222154
+      },
+      "fact": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007514618855056776
+      },
+      "failed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019769208509297087
+      },
+      "fake": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999989456,
+        "statistic": 0.002366153466680898
+      },
+      "families": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999897,
+        "statistic": 0.0021990551495133515
+      },
+      "family": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999988698,
+        "statistic": 0.0023689623107076008
+      },
+      "far": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013648966794936879
+      },
+      "father": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001029986983209219
+      },
+      "fbi": {
+        "drift_detected": false,
+        "drift_score": 0.9999989415438159,
+        "statistic": 0.003257685521202758
+      },
+      "fear": {
+        "drift_detected": false,
+        "drift_score": 0.9893824396203292,
+        "statistic": 0.005207296099470571
+      },
+      "featured": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016476350432372833
+      },
+      "february": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999998,
+        "statistic": 0.0020891537014953165
+      },
+      "federal": {
+        "drift_detected": false,
+        "drift_score": 0.9769910110599321,
+        "statistic": 0.005599715792108606
+      },
+      "feel": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999954,
+        "statistic": 0.0021729105781251867
+      },
+      "few": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013111814128188293
+      },
+      "fight": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016447145895140958
+      },
+      "fighting": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0020058990684992395
+      },
+      "final": {
+        "drift_detected": false,
+        "drift_score": 0.9470454399489394,
+        "statistic": 0.006151235107003661
+      },
+      "financial": {
+        "drift_detected": false,
+        "drift_score": 0.9999991877854032,
+        "statistic": 0.0032299536119098082
+      },
+      "find": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012549735295903641
+      },
+      "fire": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001753565046224037
+      },
+      "fired": {
+        "drift_detected": false,
+        "drift_score": 0.9999999919967808,
+        "statistic": 0.002838327588224221
+      },
+      "firm": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008362263496727307
+      },
+      "first": {
+        "drift_detected": false,
+        "drift_score": 0.9341207522964632,
+        "statistic": 0.006327438915238015
+      },
+      "five": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009163497106301488
+      },
+      "flag": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010019791499445985
+      },
+      "florida": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001866541961432544
+      },
+      "flynn": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999897,
+        "statistic": 0.002199079951668015
+      },
+      "following": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999977716,
+        "statistic": 0.0023969422415480723
+      },
+      "food": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999979539,
+        "statistic": 0.0023933707312624453
+      },
+      "for": {
+        "drift_detected": false,
+        "drift_score": 0.9949013590466439,
+        "statistic": 0.004905292662015892
+      },
+      "force": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018674906438521655
+      },
+      "forced": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999983,
+        "statistic": 0.0021422892178026842
+      },
+      "forces": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016406780388266151
+      },
+      "foreign": {
+        "drift_detected": false,
+        "drift_score": 0.733402350013308,
+        "statistic": 0.008077671171916156
+      },
+      "former": {
+        "drift_detected": false,
+        "drift_score": 0.9950092350939167,
+        "statistic": 0.004897293967105254
+      },
+      "forward": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012808421770066358
+      },
+      "found": {
+        "drift_detected": false,
+        "drift_score": 0.999999999986844,
+        "statistic": 0.0024751000317405625
+      },
+      "foundation": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018660676202227888
+      },
+      "four": {
+        "drift_detected": false,
+        "drift_score": 0.9985970310949036,
+        "statistic": 0.004485137959815755
+      },
+      "fox": {
+        "drift_detected": false,
+        "drift_score": 0.99999999999781,
+        "statistic": 0.002396213678251935
+      },
+      "france": {
+        "drift_detected": false,
+        "drift_score": 0.9999999917507042,
+        "statistic": 0.002840445072187059
+      },
+      "free": {
+        "drift_detected": false,
+        "drift_score": 0.9558487170053547,
+        "statistic": 0.00601604786220622
+      },
+      "freedom": {
+        "drift_detected": false,
+        "drift_score": 0.9999971105394003,
+        "statistic": 0.0033698563663814296
+      },
+      "friday": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999861168,
+        "statistic": 0.0024775895480247945
+      },
+      "friends": {
+        "drift_detected": false,
+        "drift_score": 0.9999963503680156,
+        "statistic": 0.0033976750832158675
+      },
+      "from": {
+        "drift_detected": false,
+        "drift_score": 0.05566713660979683,
+        "statistic": 0.015764866520073473
+      },
+      "front": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007814135876496042
+      },
+      "full": {
+        "drift_detected": false,
+        "drift_score": 0.6514470520022406,
+        "statistic": 0.008655660586480374
+      },
+      "fund": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010311371831361882
+      },
+      "funding": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018935422071598706
+      },
+      "further": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016727534254721288
+      },
+      "future": {
+        "drift_detected": false,
+        "drift_score": 0.9994069201842425,
+        "statistic": 0.004259894091078853
+      },
+      "gave": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011433545323550343
+      },
+      "general": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999999,
+        "statistic": 0.0020564737623275375
+      },
+      "george": {
+        "drift_detected": false,
+        "drift_score": 0.9997496914415637,
+        "statistic": 0.004066018747576727
+      },
+      "german": {
+        "drift_detected": false,
+        "drift_score": 0.9956730489920886,
+        "statistic": 0.0048449366184034615
+      },
+      "germany": {
+        "drift_detected": false,
+        "drift_score": 0.9840670206703916,
+        "statistic": 0.005401940309770259
+      },
+      "get": {
+        "drift_detected": false,
+        "drift_score": 0.9999866994532062,
+        "statistic": 0.003565511264487675
+      },
+      "gets": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999954,
+        "statistic": 0.002172916778663825
+      },
+      "getting": {
+        "drift_detected": false,
+        "drift_score": 0.9999991751527818,
+        "statistic": 0.0032315502506226057
+      },
+      "getty": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018121012317308116
+      },
+      "give": {
+        "drift_detected": false,
+        "drift_score": 0.9770329096011637,
+        "statistic": 0.0055986772018779
+      },
+      "given": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00100481589639545
+      },
+      "giving": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001169402995393476
+      },
+      "global": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014491495992189352
+      },
+      "go": {
+        "drift_detected": false,
+        "drift_score": 0.9996701655640694,
+        "statistic": 0.004125035474832006
+      },
+      "goes": {
+        "drift_detected": false,
+        "drift_score": 0.9968524144611652,
+        "statistic": 0.0047342353008944515
+      },
+      "going": {
+        "drift_detected": false,
+        "drift_score": 0.9977381761008645,
+        "statistic": 0.004627248106060966
+      },
+      "good": {
+        "drift_detected": false,
+        "drift_score": 0.9999978225533438,
+        "statistic": 0.003337071018055915
+      },
+      "gop": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010319184510111379
+      },
+      "got": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014447007127085243
+      },
+      "government": {
+        "drift_detected": false,
+        "drift_score": 0.9404423512556821,
+        "statistic": 0.006244035469313514
+      },
+      "governor": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999865902,
+        "statistic": 0.0024759836085038733
+      },
+      "great": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012500317002540617
+      },
+      "group": {
+        "drift_detected": false,
+        "drift_score": 0.9988443821641416,
+        "statistic": 0.004431177771862527
+      },
+      "groups": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999997274,
+        "statistic": 0.0023133899826949245
+      },
+      "gun": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009184764954009994
+      },
+      "guy": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007783164185738434
+      },
+      "had": {
+        "drift_detected": false,
+        "drift_score": 0.3195598586116901,
+        "statistic": 0.011261960916640557
+      },
+      "half": {
+        "drift_detected": false,
+        "drift_score": 0.9683106255155431,
+        "statistic": 0.0057922611200615925
+      },
+      "hand": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.000584577486922977
+      },
+      "hands": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999982,
+        "statistic": 0.0021438455530139455
+      },
+      "happened": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009760174944478672
+      },
+      "hard": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015029826761289167
+      },
+      "has": {
+        "drift_detected": false,
+        "drift_score": 0.999999999952366,
+        "statistic": 0.0025367860909020212
+      },
+      "hate": {
+        "drift_detected": false,
+        "drift_score": 0.999960300122325,
+        "statistic": 0.003729158981873981
+      },
+      "have": {
+        "drift_detected": false,
+        "drift_score": 0.4842306917325421,
+        "statistic": 0.009859975714970215
+      },
+      "having": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006935457538680412
+      },
+      "he": {
+        "drift_detected": false,
+        "drift_score": 0.8572820230748979,
+        "statistic": 0.007117620064595986
+      },
+      "head": {
+        "drift_detected": false,
+        "drift_score": 0.9999999998743279,
+        "statistic": 0.00258648650877491
+      },
+      "health": {
+        "drift_detected": false,
+        "drift_score": 0.9981382470811653,
+        "statistic": 0.004567651628438085
+      },
+      "healthcare": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019492757491785806
+      },
+      "hearing": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018656056800903098
+      },
+      "held": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006152236494001428
+      },
+      "help": {
+        "drift_detected": false,
+        "drift_score": 0.9959602323692547,
+        "statistic": 0.004820360783304056
+      },
+      "helped": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010024038868449159
+      },
+      "her": {
+        "drift_detected": false,
+        "drift_score": 0.9973441919386601,
+        "statistic": 0.0046782816397522575
+      },
+      "here": {
+        "drift_detected": false,
+        "drift_score": 0.8357777562286653,
+        "statistic": 0.007299860097245592
+      },
+      "high": {
+        "drift_detected": false,
+        "drift_score": 0.9995256596792615,
+        "statistic": 0.004206953891740195
+      },
+      "hillary": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001837647451135238
+      },
+      "him": {
+        "drift_detected": false,
+        "drift_score": 0.9999999747663657,
+        "statistic": 0.0029221309688942654
+      },
+      "himself": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016730913548307358
+      },
+      "his": {
+        "drift_detected": false,
+        "drift_score": 0.7865675968435181,
+        "statistic": 0.007687130242501228
+      },
+      "history": {
+        "drift_detected": false,
+        "drift_score": 0.999999999999873,
+        "statistic": 0.002285134127882782
+      },
+      "hit": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017802087609767314
+      },
+      "hold": {
+        "drift_detected": false,
+        "drift_score": 0.9792391875310158,
+        "statistic": 0.0055420693839038915
+      },
+      "home": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008044857921166715
+      },
+      "hope": {
+        "drift_detected": false,
+        "drift_score": 0.8560036463152794,
+        "statistic": 0.007128750031545228
+      },
+      "host": {
+        "drift_detected": false,
+        "drift_score": 0.9999954749652191,
+        "statistic": 0.0034239126626843808
+      },
+      "hours": {
+        "drift_detected": false,
+        "drift_score": 0.9999989303254102,
+        "statistic": 0.0032588047184363145
+      },
+      "house": {
+        "drift_detected": false,
+        "drift_score": 0.999998531283076,
+        "statistic": 0.0032930161906606914
+      },
+      "how": {
+        "drift_detected": false,
+        "drift_score": 0.9999978045121369,
+        "statistic": 0.003338013499936787
+      },
+      "however": {
+        "drift_detected": false,
+        "drift_score": 0.9982958692570089,
+        "statistic": 0.00454134584304422
+      },
+      "https": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001139438892172051
+      },
+      "human": {
+        "drift_detected": false,
+        "drift_score": 0.9998929045464932,
+        "statistic": 0.0038995280832008206
+      },
+      "hundreds": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001503531423802995
+      },
+      "idea": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017263291800264646
+      },
+      "if": {
+        "drift_detected": false,
+        "drift_score": 0.7167451338163411,
+        "statistic": 0.008196597503997927
+      },
+      "illegal": {
+        "drift_detected": false,
+        "drift_score": 0.9973387885675699,
+        "statistic": 0.004678938896853446
+      },
+      "image": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999134487,
+        "statistic": 0.0025670354189031297
+      },
+      "images": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.000476089761726306
+      },
+      "immediately": {
+        "drift_detected": false,
+        "drift_score": 0.9999999990779405,
+        "statistic": 0.002698539543718459
+      },
+      "immigrants": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011412060456988948
+      },
+      "immigration": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013644347393613199
+      },
+      "important": {
+        "drift_detected": false,
+        "drift_score": 0.9999993702430356,
+        "statistic": 0.0032039733547971627
+      },
+      "in": {
+        "drift_detected": false,
+        "drift_score": 0.6096710687054887,
+        "statistic": 0.008948419020747722
+      },
+      "incident": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00083547298422193
+      },
+      "include": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019225669287695757
+      },
+      "included": {
+        "drift_detected": false,
+        "drift_score": 0.9998759621163642,
+        "statistic": 0.003926832155323967
+      },
+      "including": {
+        "drift_detected": false,
+        "drift_score": 0.15856396110315396,
+        "statistic": 0.013257625996031308
+      },
+      "income": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016145613698627104
+      },
+      "increase": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006971358657696936
+      },
+      "independence": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015041607784801458
+      },
+      "industry": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009476779323633888
+      },
+      "influence": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009731652466502538
+      },
+      "information": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.000973943414256051
+      },
+      "instead": {
+        "drift_detected": false,
+        "drift_score": 0.9654111812164738,
+        "statistic": 0.0058487325261844525
+      },
+      "insurance": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009188609287997807
+      },
+      "intelligence": {
+        "drift_detected": false,
+        "drift_score": 0.9999715675482639,
+        "statistic": 0.0036767830315561634
+      },
+      "interest": {
+        "drift_detected": false,
+        "drift_score": 0.9956659786264903,
+        "statistic": 0.004845525669579187
+      },
+      "international": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999547308,
+        "statistic": 0.002534256271116253
+      },
+      "interview": {
+        "drift_detected": false,
+        "drift_score": 0.9999724649097881,
+        "statistic": 0.00367186910464401
+      },
+      "into": {
+        "drift_detected": false,
+        "drift_score": 0.9999999952497052,
+        "statistic": 0.0028025876832127317
+      },
+      "investigation": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011695859112847984
+      },
+      "involved": {
+        "drift_detected": false,
+        "drift_score": 0.9722948505852321,
+        "statistic": 0.005708891777099878
+      },
+      "iran": {
+        "drift_detected": false,
+        "drift_score": 0.9683143381454258,
+        "statistic": 0.005792186713597269
+      },
+      "iraq": {
+        "drift_detected": false,
+        "drift_score": 0.9999840686042327,
+        "statistic": 0.0035910109798519274
+      },
+      "is": {
+        "drift_detected": false,
+        "drift_score": 0.8997736352537957,
+        "statistic": 0.006718141058658866
+      },
+      "isis": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001253125769060559
+      },
+      "islamic": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013354658225998017
+      },
+      "isn": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010837084504228267
+      },
+      "israel": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017542254035946003
+      },
+      "issue": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999998,
+        "statistic": 0.0020881740163821716
+      },
+      "issued": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999961073,
+        "statistic": 0.0024206903047322426
+      },
+      "issues": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016142079391573416
+      },
+      "it": {
+        "drift_detected": false,
+        "drift_score": 0.742597374163469,
+        "statistic": 0.008011468020318657
+      },
+      "its": {
+        "drift_detected": false,
+        "drift_score": 0.9999906602065126,
+        "statistic": 0.0035171284610864273
+      },
+      "james": {
+        "drift_detected": false,
+        "drift_score": 0.9999999826599001,
+        "statistic": 0.0028939340191996843
+      },
+      "january": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999999,
+        "statistic": 0.002062097650919692
+      },
+      "job": {
+        "drift_detected": false,
+        "drift_score": 0.9999999990102632,
+        "statistic": 0.0027027962135294237
+      },
+      "jobs": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007238167837545495
+      },
+      "john": {
+        "drift_detected": false,
+        "drift_score": 0.9999532452506706,
+        "statistic": 0.0037556724853141654
+      },
+      "judge": {
+        "drift_detected": false,
+        "drift_score": 0.9999893437485314,
+        "statistic": 0.0035349395084746105
+      },
+      "july": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016405974318236538
+      },
+      "june": {
+        "drift_detected": false,
+        "drift_score": 0.9999970975667078,
+        "statistic": 0.003370383412170108
+      },
+      "just": {
+        "drift_detected": false,
+        "drift_score": 0.7052602275613078,
+        "statistic": 0.008277985774848173
+      },
+      "justice": {
+        "drift_detected": false,
+        "drift_score": 0.9872576707842563,
+        "statistic": 0.005291989257442786
+      },
+      "keep": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999219346,
+        "statistic": 0.002561730858053446
+      },
+      "key": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016129802324966747
+      },
+      "killed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017283784580637285
+      },
+      "kind": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013902971862389535
+      },
+      "know": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999963,
+        "statistic": 0.002166288402803862
+      },
+      "known": {
+        "drift_detected": false,
+        "drift_score": 0.9999999996151564,
+        "statistic": 0.002647639321609052
+      },
+      "korea": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001753620851072335
+      },
+      "korean": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016707692530911755
+      },
+      "large": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016964983883869245
+      },
+      "largest": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999954,
+        "statistic": 0.0021729043775865486
+      },
+      "last": {
+        "drift_detected": false,
+        "drift_score": 0.8182033800320169,
+        "statistic": 0.007442140758304849
+      },
+      "late": {
+        "drift_detected": false,
+        "drift_score": 0.9977658502838873,
+        "statistic": 0.004623406872342195
+      },
+      "later": {
+        "drift_detected": false,
+        "drift_score": 0.9999999460600408,
+        "statistic": 0.0029818762594456816
+      },
+      "latest": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001811505980016559
+      },
+      "law": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.000812419381370999
+      },
+      "lawmakers": {
+        "drift_detected": false,
+        "drift_score": 0.9998764177413293,
+        "statistic": 0.003926140795260102
+      },
+      "laws": {
+        "drift_detected": false,
+        "drift_score": 0.9999995420033013,
+        "statistic": 0.003172332005859979
+      },
+      "lawyer": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999999,
+        "statistic": 0.002061276079543317
+      },
+      "lead": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018394456073553833
+      },
+      "leader": {
+        "drift_detected": false,
+        "drift_score": 0.9848394642876589,
+        "statistic": 0.00537686223103695
+      },
+      "leaders": {
+        "drift_detected": false,
+        "drift_score": 0.7679929405143582,
+        "statistic": 0.007825966504317883
+      },
+      "leadership": {
+        "drift_detected": false,
+        "drift_score": 0.9999891874139207,
+        "statistic": 0.0035369236808555637
+      },
+      "leading": {
+        "drift_detected": false,
+        "drift_score": 0.9831609702265475,
+        "statistic": 0.005430292272932125
+      },
+      "least": {
+        "drift_detected": false,
+        "drift_score": 0.8154363133424758,
+        "statistic": 0.007464090665268874
+      },
+      "leave": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009747184815922516
+      },
+      "led": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008325804329228914
+      },
+      "left": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018056681728395585
+      },
+      "legal": {
+        "drift_detected": false,
+        "drift_score": 0.9999964537320536,
+        "statistic": 0.0033942151826266143
+      },
+      "legislation": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015026726491944586
+      },
+      "less": {
+        "drift_detected": false,
+        "drift_score": 0.7643206265914294,
+        "statistic": 0.007853069058933682
+      },
+      "let": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999992,
+        "statistic": 0.0021187023686244366
+      },
+      "letter": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008345708058423718
+      },
+      "level": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001894794715975312
+      },
+      "liberal": {
+        "drift_detected": false,
+        "drift_score": 0.8156153515369431,
+        "statistic": 0.007462673842178136
+      },
+      "life": {
+        "drift_detected": false,
+        "drift_score": 0.9937167060011236,
+        "statistic": 0.004985657843982083
+      },
+      "like": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999997229,
+        "statistic": 0.002314019337371964
+      },
+      "likely": {
+        "drift_detected": false,
+        "drift_score": 0.9999761563293517,
+        "statistic": 0.0036500587098006188
+      },
+      "line": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018075035322918653
+      },
+      "list": {
+        "drift_detected": false,
+        "drift_score": 0.8495762433148328,
+        "statistic": 0.007184105340703795
+      },
+      "little": {
+        "drift_detected": false,
+        "drift_score": 0.9999999462165489,
+        "statistic": 0.0029816406389754357
+      },
+      "live": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999758082,
+        "statistic": 0.002503734119412848
+      },
+      "lives": {
+        "drift_detected": false,
+        "drift_score": 0.9999804057364565,
+        "statistic": 0.0036209471806492033
+      },
+      "ll": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019742391179461416
+      },
+      "local": {
+        "drift_detected": false,
+        "drift_score": 0.9999999997758593,
+        "statistic": 0.0026175636086912535
+      },
+      "london": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007241826155371944
+      },
+      "long": {
+        "drift_detected": false,
+        "drift_score": 0.9999999996626546,
+        "statistic": 0.002640214176527156
+      },
+      "longer": {
+        "drift_detected": false,
+        "drift_score": 0.984056621623797,
+        "statistic": 0.005402272038590117
+      },
+      "look": {
+        "drift_detected": false,
+        "drift_score": 0.9999999917838899,
+        "statistic": 0.002840162947676639
+      },
+      "looking": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013365385157931842
+      },
+      "lost": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015572745929021137
+      },
+      "lot": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999993,
+        "statistic": 0.00211356212205005
+      },
+      "love": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014211293648769274
+      },
+      "low": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001447413448385615
+      },
+      "made": {
+        "drift_detected": false,
+        "drift_score": 0.9999999432742152,
+        "statistic": 0.002985968614981349
+      },
+      "main": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010577126919631974
+      },
+      "major": {
+        "drift_detected": false,
+        "drift_score": 0.9999999963769467,
+        "statistic": 0.0027845565167010644
+      },
+      "majority": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017285830758404508
+      },
+      "make": {
+        "drift_detected": false,
+        "drift_score": 0.8322811378592139,
+        "statistic": 0.007328593393536753
+      },
+      "makes": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999738154,
+        "statistic": 0.002507528849091334
+      },
+      "making": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999961,
+        "statistic": 0.0021683128786863515
+      },
+      "man": {
+        "drift_detected": false,
+        "drift_score": 0.9998946807717985,
+        "statistic": 0.003896455716279723
+      },
+      "many": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011482808603445749
+      },
+      "march": {
+        "drift_detected": false,
+        "drift_score": 0.9932650477390759,
+        "statistic": 0.005013290544655935
+      },
+      "mark": {
+        "drift_detected": false,
+        "drift_score": 0.9999928775733763,
+        "statistic": 0.0034813637539201636
+      },
+      "market": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016150729143046272
+      },
+      "mass": {
+        "drift_detected": false,
+        "drift_score": 0.9999086110017649,
+        "statistic": 0.0038706893777518125
+      },
+      "matter": {
+        "drift_detected": false,
+        "drift_score": 0.43532572131190583,
+        "statistic": 0.010242381537623246
+      },
+      "may": {
+        "drift_detected": false,
+        "drift_score": 0.8949508753249706,
+        "statistic": 0.006767029205963282
+      },
+      "mayor": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006680367376956653
+      },
+      "mccain": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012533520887227922
+      },
+      "me": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999462,
+        "statistic": 0.0022545530710617046
+      },
+      "mean": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999897,
+        "statistic": 0.0021991512578630745
+      },
+      "means": {
+        "drift_detected": false,
+        "drift_score": 0.9999999997707872,
+        "statistic": 0.002618788215082546
+      },
+      "media": {
+        "drift_detected": false,
+        "drift_score": 0.9983449190172906,
+        "statistic": 0.004532764297496605
+      },
+      "meet": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0020319537320763192
+      },
+      "meeting": {
+        "drift_detected": false,
+        "drift_score": 0.9999999985628893,
+        "statistic": 0.0027255490902539092
+      },
+      "member": {
+        "drift_detected": false,
+        "drift_score": 0.9999985977113467,
+        "statistic": 0.0032879534508198915
+      },
+      "members": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009178006366837854
+      },
+      "men": {
+        "drift_detected": false,
+        "drift_score": 0.9999999990383578,
+        "statistic": 0.002701063162965478
+      },
+      "merkel": {
+        "drift_detected": false,
+        "drift_score": 0.9999977413476699,
+        "statistic": 0.0033412594819413055
+      },
+      "message": {
+        "drift_detected": false,
+        "drift_score": 0.999933120774756,
+        "statistic": 0.0038157774071095885
+      },
+      "met": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.000584921616820222
+      },
+      "mexico": {
+        "drift_detected": false,
+        "drift_score": 0.9999999740420745,
+        "statistic": 0.002924291856627903
+      },
+      "michael": {
+        "drift_detected": false,
+        "drift_score": 0.9999721574903062,
+        "statistic": 0.0036735680522451686
+      },
+      "middle": {
+        "drift_detected": false,
+        "drift_score": 0.9999971308095887,
+        "statistic": 0.0033690285944661946
+      },
+      "might": {
+        "drift_detected": false,
+        "drift_score": 0.9932511532600486,
+        "statistic": 0.00501411831657117
+      },
+      "mike": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005570408945988481
+      },
+      "military": {
+        "drift_detected": false,
+        "drift_score": 0.9999992176532941,
+        "statistic": 0.003226087576036374
+      },
+      "million": {
+        "drift_detected": false,
+        "drift_score": 0.9365747497694141,
+        "statistic": 0.006295630151756382
+      },
+      "millions": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999981,
+        "statistic": 0.002145284077990084
+      },
+      "minister": {
+        "drift_detected": false,
+        "drift_score": 0.9999999998765036,
+        "statistic": 0.0025855657287793266
+      },
+      "ministry": {
+        "drift_detected": false,
+        "drift_score": 0.9999999963391053,
+        "statistic": 0.002785241676226291
+      },
+      "missile": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010866320044152777
+      },
+      "monday": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999993,
+        "statistic": 0.0021169445159056055
+      },
+      "money": {
+        "drift_detected": false,
+        "drift_score": 0.9973460505407366,
+        "statistic": 0.004678055320090024
+      },
+      "month": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018382148004254528
+      },
+      "months": {
+        "drift_detected": false,
+        "drift_score": 0.9999996630869906,
+        "statistic": 0.003142708932266647
+      },
+      "more": {
+        "drift_detected": false,
+        "drift_score": 0.9997496506365036,
+        "statistic": 0.004066052850539514
+      },
+      "morning": {
+        "drift_detected": false,
+        "drift_score": 0.9367362301202784,
+        "statistic": 0.006293512667793544
+      },
+      "moscow": {
+        "drift_detected": false,
+        "drift_score": 0.9793553207865165,
+        "statistic": 0.005538978415366769
+      },
+      "most": {
+        "drift_detected": false,
+        "drift_score": 0.9998755686825995,
+        "statistic": 0.00392742740703822
+      },
+      "move": {
+        "drift_detected": false,
+        "drift_score": 0.9999914804752319,
+        "statistic": 0.0035048730963648245
+      },
+      "movement": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010009219580978668
+      },
+      "mr": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001170636902592892
+      },
+      "much": {
+        "drift_detected": false,
+        "drift_score": 0.9999999042020266,
+        "statistic": 0.0030295894046682426
+      },
+      "muslim": {
+        "drift_detected": false,
+        "drift_score": 0.8462305775663688,
+        "statistic": 0.007212541011137996
+      },
+      "muslims": {
+        "drift_detected": false,
+        "drift_score": 0.999876029630851,
+        "statistic": 0.003926729846435606
+      },
+      "must": {
+        "drift_detected": false,
+        "drift_score": 0.9802271479014095,
+        "statistic": 0.005515385365649772
+      },
+      "my": {
+        "drift_detected": false,
+        "drift_score": 0.9991584668186888,
+        "statistic": 0.004347123269375475
+      },
+      "myanmar": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009188578285304061
+      },
+      "name": {
+        "drift_detected": false,
+        "drift_score": 0.999999999621286,
+        "statistic": 0.002646730942690856
+      },
+      "nation": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018126189767114775
+      },
+      "national": {
+        "drift_detected": false,
+        "drift_score": 0.6598920430687776,
+        "statistic": 0.008596591154646394
+      },
+      "nations": {
+        "drift_detected": false,
+        "drift_score": 0.9999999996211406,
+        "statistic": 0.0026467526445762557
+      },
+      "near": {
+        "drift_detected": false,
+        "drift_score": 0.9999443566519964,
+        "statistic": 0.0037845297923793098
+      },
+      "nearly": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0004453877944008422
+      },
+      "need": {
+        "drift_detected": false,
+        "drift_score": 0.9506361293404664,
+        "statistic": 0.006097870170764685
+      },
+      "needed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015870774821175049
+      },
+      "needs": {
+        "drift_detected": false,
+        "drift_score": 0.9999999920619023,
+        "statistic": 0.0028377571386647427
+      },
+      "network": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010858693381563533
+      },
+      "never": {
+        "drift_detected": false,
+        "drift_score": 0.9681981851054808,
+        "statistic": 0.005794511915606204
+      },
+      "new": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011700075479157412
+      },
+      "news": {
+        "drift_detected": false,
+        "drift_score": 0.9575472455787292,
+        "statistic": 0.005988114435405922
+      },
+      "next": {
+        "drift_detected": false,
+        "drift_score": 0.9999998972898687,
+        "statistic": 0.0030355357212724643
+      },
+      "night": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999998,
+        "statistic": 0.002087426851469898
+      },
+      "no": {
+        "drift_detected": false,
+        "drift_score": 0.7900997630550608,
+        "statistic": 0.007660359416705398
+      },
+      "nomination": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0002783235801959716
+      },
+      "nominee": {
+        "drift_detected": false,
+        "drift_score": 0.9999999997694993,
+        "statistic": 0.0026190951417477404
+      },
+      "non": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001642823425213602
+      },
+      "north": {
+        "drift_detected": false,
+        "drift_score": 0.9999995227561497,
+        "statistic": 0.0031763685565474598
+      },
+      "not": {
+        "drift_detected": false,
+        "drift_score": 0.7886566338581005,
+        "statistic": 0.0076713126683020105
+      },
+      "nothing": {
+        "drift_detected": false,
+        "drift_score": 0.9970948383247059,
+        "statistic": 0.004707579185064481
+      },
+      "nov": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008923722275143708
+      },
+      "november": {
+        "drift_detected": false,
+        "drift_score": 0.999934570070749,
+        "statistic": 0.0038120136801245152
+      },
+      "now": {
+        "drift_detected": false,
+        "drift_score": 0.5322849250273759,
+        "statistic": 0.009501810898327245
+      },
+      "nuclear": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999998778,
+        "statistic": 0.002283732806138805
+      },
+      "number": {
+        "drift_detected": false,
+        "drift_score": 0.9987303790572876,
+        "statistic": 0.004457099123857611
+      },
+      "obama": {
+        "drift_detected": false,
+        "drift_score": 0.9999999998830483,
+        "statistic": 0.002582701079904437
+      },
+      "obamacare": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013093739557905604
+      },
+      "october": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007513316741931675
+      },
+      "of": {
+        "drift_detected": false,
+        "drift_score": 0.06371662254155352,
+        "statistic": 0.015464320209211069
+      },
+      "off": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001842186245456623
+      },
+      "office": {
+        "drift_detected": false,
+        "drift_score": 0.9999999964934311,
+        "statistic": 0.0027824049297755504
+      },
+      "officer": {
+        "drift_detected": false,
+        "drift_score": 0.999999999998949,
+        "statistic": 0.0023660263556377625
+      },
+      "officers": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010576661879230231
+      },
+      "official": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999998845,
+        "statistic": 0.002281652525408129
+      },
+      "officials": {
+        "drift_detected": false,
+        "drift_score": 0.9983113914738593,
+        "statistic": 0.004538651708983266
+      },
+      "often": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999994517,
+        "statistic": 0.0023402073125309286
+      },
+      "oil": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.000779463518231549
+      },
+      "old": {
+        "drift_detected": false,
+        "drift_score": 0.9999978169890472,
+        "statistic": 0.0033373624433743476
+      },
+      "on": {
+        "drift_detected": false,
+        "drift_score": 0.3871960009137926,
+        "statistic": 0.01064277202274777
+      },
+      "once": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006403978364832863
+      },
+      "one": {
+        "drift_detected": false,
+        "drift_score": 0.8802111909483264,
+        "statistic": 0.0069101097365137365
+      },
+      "only": {
+        "drift_detected": false,
+        "drift_score": 0.9999999998741136,
+        "statistic": 0.002586576416585884
+      },
+      "open": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999979351,
+        "statistic": 0.002393752064391852
+      },
+      "opposition": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009743619506175083
+      },
+      "or": {
+        "drift_detected": false,
+        "drift_score": 0.7591662636661554,
+        "statistic": 0.007890938848985285
+      },
+      "order": {
+        "drift_detected": false,
+        "drift_score": 0.9982988610409417,
+        "statistic": 0.004540828098063443
+      },
+      "organization": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999921769,
+        "statistic": 0.002451429475289979
+      },
+      "other": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999939263,
+        "statistic": 0.002440147595142772
+      },
+      "others": {
+        "drift_detected": false,
+        "drift_score": 0.9541185725682921,
+        "statistic": 0.006043829375808496
+      },
+      "our": {
+        "drift_detected": false,
+        "drift_score": 0.9973231930339809,
+        "statistic": 0.004680830061154051
+      },
+      "out": {
+        "drift_detected": false,
+        "drift_score": 0.890781976282454,
+        "statistic": 0.0068084147014524365
+      },
+      "outside": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001976939452545845
+      },
+      "over": {
+        "drift_detected": false,
+        "drift_score": 0.9866903447830226,
+        "statistic": 0.005312866471213318
+      },
+      "own": {
+        "drift_detected": false,
+        "drift_score": 0.7752955025405917,
+        "statistic": 0.00777174899400912
+      },
+      "page": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999207837,
+        "statistic": 0.002562481123234983
+      },
+      "paid": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001504601016727114
+      },
+      "parliament": {
+        "drift_detected": false,
+        "drift_score": 0.9995297134133022,
+        "statistic": 0.00420496041855134
+      },
+      "part": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999998632,
+        "statistic": 0.0022878096603276
+      },
+      "parties": {
+        "drift_detected": false,
+        "drift_score": 0.9999998578945071,
+        "statistic": 0.003063720269889547
+      },
+      "party": {
+        "drift_detected": false,
+        "drift_score": 0.6507112239600747,
+        "statistic": 0.00866080703359351
+      },
+      "pass": {
+        "drift_detected": false,
+        "drift_score": 0.9999528287892809,
+        "statistic": 0.0037571265116370656
+      },
+      "passed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016133615656260814
+      },
+      "past": {
+        "drift_detected": false,
+        "drift_score": 0.9999866249150319,
+        "statistic": 0.003566292532362625
+      },
+      "paul": {
+        "drift_detected": false,
+        "drift_score": 0.9965816464201473,
+        "statistic": 0.004762181128772136
+      },
+      "pay": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999983,
+        "statistic": 0.0021415575542371723
+      },
+      "peace": {
+        "drift_detected": false,
+        "drift_score": 0.9999084532832528,
+        "statistic": 0.0038709994046862706
+      },
+      "pence": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017257897331605099
+      },
+      "people": {
+        "drift_detected": false,
+        "drift_score": 0.3777875287799588,
+        "statistic": 0.010724485821879237
+      },
+      "percent": {
+        "drift_detected": false,
+        "drift_score": 0.9998382384251148,
+        "statistic": 0.00397772927716411
+      },
+      "person": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001918462172156632
+      },
+      "personal": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012525305173463064
+      },
+      "phone": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00027816546645942353
+      },
+      "pic": {
+        "drift_detected": false,
+        "drift_score": 0.9999999997694079,
+        "statistic": 0.0026191168436331402
+      },
+      "place": {
+        "drift_detected": false,
+        "drift_score": 0.9911703506064231,
+        "statistic": 0.005125892327273562
+      },
+      "plan": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016451734293772002
+      },
+      "planned": {
+        "drift_detected": false,
+        "drift_score": 0.9988696776643965,
+        "statistic": 0.004425147747985969
+      },
+      "plans": {
+        "drift_detected": false,
+        "drift_score": 0.9858364724236367,
+        "statistic": 0.005343125100022439
+      },
+      "point": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015340721771226473
+      },
+      "points": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999958,
+        "statistic": 0.0021703001513365683
+      },
+      "police": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001531046314241724
+      },
+      "policies": {
+        "drift_detected": false,
+        "drift_score": 0.9998367966134943,
+        "statistic": 0.003979465427997431
+      },
+      "policy": {
+        "drift_detected": false,
+        "drift_score": 0.7267046886671841,
+        "statistic": 0.00812563233868635
+      },
+      "political": {
+        "drift_detected": false,
+        "drift_score": 0.8150925676083752,
+        "statistic": 0.007466809601484492
+      },
+      "politics": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999999,
+        "statistic": 0.0020618930331429697
+      },
+      "poll": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015322151157848296
+      },
+      "polls": {
+        "drift_detected": false,
+        "drift_score": 0.9999999998709931,
+        "statistic": 0.0025878692289028615
+      },
+      "popular": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999864292,
+        "statistic": 0.0024765354564473263
+      },
+      "position": {
+        "drift_detected": false,
+        "drift_score": 0.9999998595470521,
+        "statistic": 0.0030626909804669644
+      },
+      "possible": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019235931179228949
+      },
+      "post": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999977638,
+        "statistic": 0.002397087954207233
+      },
+      "posted": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016717489382043205
+      },
+      "potential": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999998799,
+        "statistic": 0.00228310035119228
+      },
+      "power": {
+        "drift_detected": false,
+        "drift_score": 0.999855072189909,
+        "statistic": 0.003956421125954623
+      },
+      "presidency": {
+        "drift_detected": false,
+        "drift_score": 0.9999999996446681,
+        "statistic": 0.0026431346302504544
+      },
+      "president": {
+        "drift_detected": false,
+        "drift_score": 0.9999995939248955,
+        "statistic": 0.003160622288543191
+      },
+      "presidential": {
+        "drift_detected": false,
+        "drift_score": 0.9996325107717878,
+        "statistic": 0.004148892047443287
+      },
+      "press": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006121791849033054
+      },
+      "pressure": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011428212860277176
+      },
+      "pretty": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017274421767213832
+      },
+      "previously": {
+        "drift_detected": false,
+        "drift_score": 0.9998585043138708,
+        "statistic": 0.0039518203262463025
+      },
+      "primary": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016993971402247121
+      },
+      "prime": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999960395,
+        "statistic": 0.0024214374696445162
+      },
+      "private": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016148062911409689
+      },
+      "pro": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999958372,
+        "statistic": 0.0024235952571087793
+      },
+      "probably": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007531918358003598
+      },
+      "problem": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999425,
+        "statistic": 0.0022568503706466014
+      },
+      "process": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001334160609205437
+      },
+      "program": {
+        "drift_detected": false,
+        "drift_score": 0.9999964519028743,
+        "statistic": 0.0033942771880135503
+      },
+      "proposed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011982634027278838
+      },
+      "protect": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001003851712629067
+      },
+      "protest": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019762728946365327
+      },
+      "protesters": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.002004894581231431
+      },
+      "protests": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005835419969616451
+      },
+      "provide": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006122256889434796
+      },
+      "public": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999999,
+        "statistic": 0.002064937497639918
+      },
+      "push": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001195724282134214
+      },
+      "put": {
+        "drift_detected": false,
+        "drift_score": 0.9999999998579365,
+        "statistic": 0.0025929784727837246
+      },
+      "putin": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001169533206705875
+      },
+      "question": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015891205596159086
+      },
+      "questions": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999958223,
+        "statistic": 0.002423750270576064
+      },
+      "race": {
+        "drift_detected": false,
+        "drift_score": 0.9999999917707764,
+        "statistic": 0.0028402745573730126
+      },
+      "racist": {
+        "drift_detected": false,
+        "drift_score": 0.9999942688774622,
+        "statistic": 0.003453473730890777
+      },
+      "raised": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00178043198036959
+      },
+      "rally": {
+        "drift_detected": false,
+        "drift_score": 0.9999332881052518,
+        "statistic": 0.003815346469670633
+      },
+      "rather": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999998,
+        "statistic": 0.0020897954572497435
+      },
+      "re": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999979,
+        "statistic": 0.0021499623844321025
+      },
+      "read": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016728960378620261
+      },
+      "real": {
+        "drift_detected": false,
+        "drift_score": 0.9802427202465421,
+        "statistic": 0.005514957528480191
+      },
+      "realdonaldtrump": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016156371633254674
+      },
+      "reality": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007795658271199102
+      },
+      "really": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016712435943010417
+      },
+      "reason": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999771,
+        "statistic": 0.002225317531136417
+      },
+      "received": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017522381309442725
+      },
+      "recent": {
+        "drift_detected": false,
+        "drift_score": 0.9960408522237539,
+        "statistic": 0.004813220863002066
+      },
+      "recently": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005827762304333461
+      },
+      "record": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019223499099154662
+      },
+      "reform": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007237330764822136
+      },
+      "refugees": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017815046735629725
+      },
+      "region": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0020328466096477538
+      },
+      "regional": {
+        "drift_detected": false,
+        "drift_score": 0.999966184132705,
+        "statistic": 0.0037037057705500143
+      },
+      "related": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008060917316374816
+      },
+      "relations": {
+        "drift_detected": false,
+        "drift_score": 0.9999998054520339,
+        "statistic": 0.003091759105847691
+      },
+      "relationship": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0007794201144607493
+      },
+      "release": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006403916359445372
+      },
+      "released": {
+        "drift_detected": false,
+        "drift_score": 0.9999982338229036,
+        "statistic": 0.0033134283640294804
+      },
+      "religious": {
+        "drift_detected": false,
+        "drift_score": 0.999998954095115,
+        "statistic": 0.003256420611309818
+      },
+      "remarks": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016144621612436127
+      },
+      "report": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005856408793082357
+      },
+      "reported": {
+        "drift_detected": false,
+        "drift_score": 0.9999994050908185,
+        "statistic": 0.003198247157316536
+      },
+      "reporters": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009460626920345661
+      },
+      "reports": {
+        "drift_detected": false,
+        "drift_score": 0.9999999994287222,
+        "statistic": 0.0026702898894449545
+      },
+      "representative": {
+        "drift_detected": false,
+        "drift_score": 0.9084481113035542,
+        "statistic": 0.006627157454185295
+      },
+      "representatives": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999958005,
+        "statistic": 0.002423976590238186
+      },
+      "republican": {
+        "drift_detected": false,
+        "drift_score": 0.5559742067582895,
+        "statistic": 0.009330009472562906
+      },
+      "republicans": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.000835507087184717
+      },
+      "request": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012530606634042485
+      },
+      "response": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999760858,
+        "statistic": 0.002503182271469395
+      },
+      "result": {
+        "drift_detected": false,
+        "drift_score": 0.9995291540400935,
+        "statistic": 0.0042052363425229
+      },
+      "return": {
+        "drift_detected": false,
+        "drift_score": 0.9999989308560944,
+        "statistic": 0.003258752013857391
+      },
+      "reuters": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001921903471129749
+      },
+      "review": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015032275974071752
+      },
+      "right": {
+        "drift_detected": false,
+        "drift_score": 0.9899155668516436,
+        "statistic": 0.005184143288000542
+      },
+      "rights": {
+        "drift_detected": false,
+        "drift_score": 0.996837584378592,
+        "statistic": 0.004735813337991113
+      },
+      "role": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001587275899355589
+      },
+      "room": {
+        "drift_detected": false,
+        "drift_score": 0.9999999487945763,
+        "statistic": 0.002977666093674891
+      },
+      "rubio": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005291229691453125
+      },
+      "rule": {
+        "drift_detected": false,
+        "drift_score": 0.9998759723478469,
+        "statistic": 0.003926816653977205
+      },
+      "rules": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999567712,
+        "statistic": 0.0025319713726088544
+      },
+      "ruling": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.002004950386079729
+      },
+      "run": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001865831999752432
+      },
+      "running": {
+        "drift_detected": false,
+        "drift_score": 0.9999995257894956,
+        "statistic": 0.0031757423021396836
+      },
+      "russia": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999759,
+        "statistic": 0.002226945172542738
+      },
+      "russian": {
+        "drift_detected": false,
+        "drift_score": 0.9998785097553361,
+        "statistic": 0.003922938217026384
+      },
+      "ryan": {
+        "drift_detected": false,
+        "drift_score": 0.9998567229734535,
+        "statistic": 0.0039542199347194495
+      },
+      "said": {
+        "drift_detected": false,
+        "drift_score": 0.899983319053947,
+        "statistic": 0.006715989471733352
+      },
+      "same": {
+        "drift_detected": false,
+        "drift_score": 0.8492855994851944,
+        "statistic": 0.007186585556180014
+      },
+      "sanctions": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011977611590939796
+      },
+      "sanders": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001224597090546009
+      },
+      "saturday": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014218734295198265
+      },
+      "saudi": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015870464794240924
+      },
+      "saw": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005568362768220148
+      },
+      "say": {
+        "drift_detected": false,
+        "drift_score": 0.9989680002087303,
+        "statistic": 0.004400618416926849
+      },
+      "saying": {
+        "drift_detected": false,
+        "drift_score": 0.9981574809435929,
+        "statistic": 0.004564538958015563
+      },
+      "says": {
+        "drift_detected": false,
+        "drift_score": 0.9999999519938904,
+        "statistic": 0.0029724700422523176
+      },
+      "school": {
+        "drift_detected": false,
+        "drift_score": 0.9999998121227935,
+        "statistic": 0.0030886061319235214
+      },
+      "second": {
+        "drift_detected": false,
+        "drift_score": 0.99999828122275,
+        "statistic": 0.0033103932003405445
+      },
+      "secret": {
+        "drift_detected": false,
+        "drift_score": 0.9576350914238856,
+        "statistic": 0.0059866511082748985
+      },
+      "secretary": {
+        "drift_detected": false,
+        "drift_score": 0.9960492166219418,
+        "statistic": 0.004812473698089903
+      },
+      "security": {
+        "drift_detected": false,
+        "drift_score": 0.9999870945845264,
+        "statistic": 0.0035613041989862593
+      },
+      "see": {
+        "drift_detected": false,
+        "drift_score": 0.8556452831559169,
+        "statistic": 0.0071318627019677505
+      },
+      "seeking": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00036332676510264506
+      },
+      "seems": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014757189075071953
+      },
+      "seen": {
+        "drift_detected": false,
+        "drift_score": 0.999991258061922,
+        "statistic": 0.003508295793722027
+      },
+      "senate": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019227622457383964
+      },
+      "senator": {
+        "drift_detected": false,
+        "drift_score": 0.9998564752216552,
+        "statistic": 0.0039545516635394184
+      },
+      "senior": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999990032,
+        "statistic": 0.0023638902700588993
+      },
+      "sent": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014216967141671422
+      },
+      "september": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00141836082435165
+      },
+      "serious": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999997563,
+        "statistic": 0.002309179816924134
+      },
+      "service": {
+        "drift_detected": false,
+        "drift_score": 0.9999977195027422,
+        "statistic": 0.0033423631778281004
+      },
+      "services": {
+        "drift_detected": false,
+        "drift_score": 0.9959890460455332,
+        "statistic": 0.0048178216627103865
+      },
+      "sessions": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019215004361148313
+      },
+      "set": {
+        "drift_detected": false,
+        "drift_score": 0.9696172455766853,
+        "statistic": 0.005765716613927996
+      },
+      "seven": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015031624917509756
+      },
+      "several": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018101480620433819
+      },
+      "sexual": {
+        "drift_detected": false,
+        "drift_score": 0.9999929023508243,
+        "statistic": 0.0034809111145958083
+      },
+      "she": {
+        "drift_detected": false,
+        "drift_score": 0.9821374194875148,
+        "statistic": 0.005461068646721912
+      },
+      "shooting": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012251458382200875
+      },
+      "short": {
+        "drift_detected": false,
+        "drift_score": 0.9999999738911288,
+        "statistic": 0.0029247351951442457
+      },
+      "shot": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006694690621331656
+      },
+      "should": {
+        "drift_detected": false,
+        "drift_score": 0.46940179924099734,
+        "statistic": 0.009973746299130948
+      },
+      "show": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999993,
+        "statistic": 0.002116783301899683
+      },
+      "showed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008612176208644406
+      },
+      "shows": {
+        "drift_detected": false,
+        "drift_score": 0.9999953993091661,
+        "statistic": 0.0034259619407215336
+      },
+      "side": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010873140636712408
+      },
+      "sign": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012247366026666429
+      },
+      "signed": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001808278599628177
+      },
+      "simply": {
+        "drift_detected": false,
+        "drift_score": 0.9975634266944413,
+        "statistic": 0.004650683042041304
+      },
+      "since": {
+        "drift_detected": false,
+        "drift_score": 0.4137132188538428,
+        "statistic": 0.01041878686336506
+      },
+      "single": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0020057967596108783
+      },
+      "situation": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999746,
+        "statistic": 0.002228808434419194
+      },
+      "six": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0004732530152754544
+      },
+      "small": {
+        "drift_detected": false,
+        "drift_score": 0.9999999944237395,
+        "statistic": 0.002813426224843596
+      },
+      "so": {
+        "drift_detected": false,
+        "drift_score": 0.9999765192035881,
+        "statistic": 0.0036477583099464583
+      },
+      "social": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005011988431530279
+      },
+      "some": {
+        "drift_detected": false,
+        "drift_score": 0.5824405530033814,
+        "statistic": 0.00914082793684945
+      },
+      "someone": {
+        "drift_detected": false,
+        "drift_score": 0.9990705817553449,
+        "statistic": 0.00437291441005816
+      },
+      "something": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999549368,
+        "statistic": 0.002534029951454131
+      },
+      "son": {
+        "drift_detected": false,
+        "drift_score": 0.9945729174686604,
+        "statistic": 0.00492887951119414
+      },
+      "soon": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001616254116925231
+      },
+      "source": {
+        "drift_detected": false,
+        "drift_score": 0.9999942447232015,
+        "statistic": 0.0034540069772182047
+      },
+      "sources": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016161828107301712
+      },
+      "south": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015291148464395832
+      },
+      "speak": {
+        "drift_detected": false,
+        "drift_score": 0.9953227744630111,
+        "statistic": 0.004873273080218676
+      },
+      "speaker": {
+        "drift_detected": false,
+        "drift_score": 0.986534836659179,
+        "statistic": 0.005318477958728085
+      },
+      "speaking": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0019229730640538678
+      },
+      "special": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013368268408422423
+      },
+      "speech": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0012529304520918494
+      },
+      "spending": {
+        "drift_detected": false,
+        "drift_score": 0.9999996472529458,
+        "statistic": 0.003147086512581998
+      },
+      "spent": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010313511017210342
+      },
+      "spoke": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001059445742527254
+      },
+      "spokesman": {
+        "drift_detected": false,
+        "drift_score": 0.9761216536007197,
+        "statistic": 0.005620983639816668
+      },
+      "staff": {
+        "drift_detected": false,
+        "drift_score": 0.9937226767264796,
+        "statistic": 0.0049852827113914255
+      },
+      "stand": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010561873594454596
+      },
+      "star": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005847200993127633
+      },
+      "start": {
+        "drift_detected": false,
+        "drift_score": 0.9999999878822368,
+        "statistic": 0.0028677553448488435
+      },
+      "started": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001558865031076162
+      },
+      "state": {
+        "drift_detected": false,
+        "drift_score": 0.8531980470227793,
+        "statistic": 0.0071530344413262
+      },
+      "statement": {
+        "drift_detected": false,
+        "drift_score": 0.999924503505226,
+        "statistic": 0.00383680653407803
+      },
+      "states": {
+        "drift_detected": false,
+        "drift_score": 0.9999323639137306,
+        "statistic": 0.0038177150754503675
+      },
+      "step": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015866620460253111
+      },
+      "still": {
+        "drift_detected": false,
+        "drift_score": 0.9966453370557621,
+        "statistic": 0.004755766671496797
+      },
+      "stop": {
+        "drift_detected": false,
+        "drift_score": 0.9856959395911832,
+        "statistic": 0.005347980121817031
+      },
+      "story": {
+        "drift_detected": false,
+        "drift_score": 0.9997128339731156,
+        "statistic": 0.004095074471879956
+      },
+      "street": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018636649114801562
+      },
+      "strong": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016722232794140757
+      },
+      "students": {
+        "drift_detected": false,
+        "drift_score": 0.9999999990409331,
+        "statistic": 0.0027009019489595554
+      },
+      "such": {
+        "drift_detected": false,
+        "drift_score": 0.9996692669202438,
+        "statistic": 0.004125630726546259
+      },
+      "sunday": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999997,
+        "statistic": 0.002090576725124693
+      },
+      "support": {
+        "drift_detected": false,
+        "drift_score": 0.9590333157430082,
+        "statistic": 0.0059631014623288126
+      },
+      "supporters": {
+        "drift_detected": false,
+        "drift_score": 0.9999999996497009,
+        "statistic": 0.002642331660489994
+      },
+      "supreme": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011699145398353927
+      },
+      "sure": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013941384199577245
+      },
+      "syria": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999998,
+        "statistic": 0.0020883476314654814
+      },
+      "syrian": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010019574480591986
+      },
+      "system": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999989329,
+        "statistic": 0.0023666402089680405
+      },
+      "take": {
+        "drift_detected": false,
+        "drift_score": 0.979092602964244,
+        "statistic": 0.005545954021393462
+      },
+      "taken": {
+        "drift_detected": false,
+        "drift_score": 0.9999999993792221,
+        "statistic": 0.0026751294098928957
+      },
+      "taking": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015618071866847494
+      },
+      "talk": {
+        "drift_detected": false,
+        "drift_score": 0.9999999994088598,
+        "statistic": 0.0026722771620952823
+      },
+      "talking": {
+        "drift_detected": false,
+        "drift_score": 0.999999981942514,
+        "statistic": 0.002896941280464582
+      },
+      "talks": {
+        "drift_detected": false,
+        "drift_score": 0.9999999997711373,
+        "statistic": 0.00261870450781021
+      },
+      "tax": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999898,
+        "statistic": 0.0021986335128822976
+      },
+      "taxes": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005849588200523836
+      },
+      "team": {
+        "drift_detected": false,
+        "drift_score": 0.9946186482283735,
+        "statistic": 0.004925661431613881
+      },
+      "ted": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0014473483427294154
+      },
+      "tell": {
+        "drift_detected": false,
+        "drift_score": 0.9999999818791193,
+        "statistic": 0.0028972017030896025
+      },
+      "term": {
+        "drift_detected": false,
+        "drift_score": 0.9999999287368907,
+        "statistic": 0.003004725244519779
+      },
+      "terrorism": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999954,
+        "statistic": 0.0021727338627725024
+      },
+      "terrorist": {
+        "drift_detected": false,
+        "drift_score": 0.9999986189974245,
+        "statistic": 0.0032862855059122564
+      },
+      "texas": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001002410087383554
+      },
+      "than": {
+        "drift_detected": false,
+        "drift_score": 0.9993991079842725,
+        "statistic": 0.004263059466080299
+      },
+      "that": {
+        "drift_detected": false,
+        "drift_score": 0.738385953867283,
+        "statistic": 0.008041844459362929
+      },
+      "the": {
+        "drift_detected": false,
+        "drift_score": 0.20311907437313825,
+        "statistic": 0.012590584444795438
+      },
+      "their": {
+        "drift_detected": false,
+        "drift_score": 0.5324982671635787,
+        "statistic": 0.00950025146284661
+      },
+      "them": {
+        "drift_detected": false,
+        "drift_score": 0.9927675651510839,
+        "statistic": 0.005042166453337105
+      },
+      "themselves": {
+        "drift_detected": false,
+        "drift_score": 0.9993319800860667,
+        "statistic": 0.004288946715112707
+      },
+      "then": {
+        "drift_detected": false,
+        "drift_score": 0.9999985580148055,
+        "statistic": 0.003291004115855589
+      },
+      "there": {
+        "drift_detected": false,
+        "drift_score": 0.9998567276008631,
+        "statistic": 0.0039542137341808115
+      },
+      "these": {
+        "drift_detected": false,
+        "drift_score": 0.9991536182271185,
+        "statistic": 0.004348602097853038
+      },
+      "they": {
+        "drift_detected": false,
+        "drift_score": 0.7940121063489958,
+        "statistic": 0.007630553427220632
+      },
+      "thing": {
+        "drift_detected": false,
+        "drift_score": 0.9999999753357623,
+        "statistic": 0.0029203917177915706
+      },
+      "things": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015619466988052721
+      },
+      "think": {
+        "drift_detected": false,
+        "drift_score": 0.9999994158490952,
+        "statistic": 0.0031964179984028673
+      },
+      "third": {
+        "drift_detected": false,
+        "drift_score": 0.9999891632974227,
+        "statistic": 0.0035372275072513837
+      },
+      "this": {
+        "drift_detected": false,
+        "drift_score": 0.4445622885869397,
+        "statistic": 0.010168489718049734
+      },
+      "those": {
+        "drift_detected": false,
+        "drift_score": 0.975745645322741,
+        "statistic": 0.005630020924957901
+      },
+      "though": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999994682,
+        "statistic": 0.0023390137088330487
+      },
+      "thought": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001280882480508172
+      },
+      "thousands": {
+        "drift_detected": false,
+        "drift_score": 0.9999838221192086,
+        "statistic": 0.003593205970548352
+      },
+      "threat": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.00027838248531353305
+      },
+      "three": {
+        "drift_detected": false,
+        "drift_score": 0.7602372695754298,
+        "statistic": 0.00788308586673403
+      },
+      "through": {
+        "drift_detected": false,
+        "drift_score": 0.9999999611777737,
+        "statistic": 0.0029555611732436926
+      },
+      "thursday": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013088283083858565
+      },
+      "ties": {
+        "drift_detected": false,
+        "drift_score": 0.9324129766667894,
+        "statistic": 0.006349181104155943
+      },
+      "tillerson": {
+        "drift_detected": false,
+        "drift_score": 0.9999999996363628,
+        "statistic": 0.0026444367433753335
+      },
+      "time": {
+        "drift_detected": false,
+        "drift_score": 0.05090005414479437,
+        "statistic": 0.015960974057504185
+      },
+      "times": {
+        "drift_detected": false,
+        "drift_score": 0.9999999997817945,
+        "statistic": 0.002616097181290966
+      },
+      "to": {
+        "drift_detected": false,
+        "drift_score": 0.44286859195670114,
+        "statistic": 0.010181975889701322
+      },
+      "today": {
+        "drift_detected": false,
+        "drift_score": 0.6466798188639292,
+        "statistic": 0.00868900398328809
+      },
+      "together": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001030145096945656
+      },
+      "told": {
+        "drift_detected": false,
+        "drift_score": 0.9923802022461689,
+        "statistic": 0.0050636420190913745
+      },
+      "too": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010859282432740258
+      },
+      "took": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008590474323227903
+      },
+      "top": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018093481925522958
+      },
+      "total": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0010020535564088107
+      },
+      "toward": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016161270058820953
+      },
+      "town": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008627770563450765
+      },
+      "trade": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001837179310464121
+      },
+      "travel": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016415430139739007
+      },
+      "tried": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0020340557146923954
+      },
+      "true": {
+        "drift_detected": false,
+        "drift_score": 0.9999229653189303,
+        "statistic": 0.0038403408411316065
+      },
+      "trump": {
+        "drift_detected": false,
+        "drift_score": 0.99999621273843,
+        "statistic": 0.003402148771881053
+      },
+      "truth": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016428420268295163
+      },
+      "try": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005586158314261347
+      },
+      "trying": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0006711463078489244
+      },
+      "tuesday": {
+        "drift_detected": false,
+        "drift_score": 0.9999084311840538,
+        "statistic": 0.0038710428084570703
+      },
+      "turkey": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008070466145958521
+      },
+      "turn": {
+        "drift_detected": false,
+        "drift_score": 0.9654565009937945,
+        "statistic": 0.005847873751575805
+      },
+      "turned": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015883857957811331
+      },
+      "tv": {
+        "drift_detected": false,
+        "drift_score": 0.9841499450430643,
+        "statistic": 0.005399289579480104
+      },
+      "tweet": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999959,
+        "statistic": 0.002170185441370709
+      },
+      "twitter": {
+        "drift_detected": false,
+        "drift_score": 0.9999992269518815,
+        "statistic": 0.0032248567691063323
+      },
+      "two": {
+        "drift_detected": false,
+        "drift_score": 0.1705210735425089,
+        "statistic": 0.013065427898244941
+      },
+      "under": {
+        "drift_detected": false,
+        "drift_score": 0.8649972364250145,
+        "statistic": 0.007049538149775381
+      },
+      "union": {
+        "drift_detected": false,
+        "drift_score": 0.832850807422101,
+        "statistic": 0.007323927488172233
+      },
+      "united": {
+        "drift_detected": false,
+        "drift_score": 0.9758786984689973,
+        "statistic": 0.005626833848071056
+      },
+      "university": {
+        "drift_detected": false,
+        "drift_score": 0.9996309473626045,
+        "statistic": 0.0041498376295935335
+      },
+      "until": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0009494109829274455
+      },
+      "up": {
+        "drift_detected": false,
+        "drift_score": 0.9999627771849099,
+        "statistic": 0.003718872288186681
+      },
+      "us": {
+        "drift_detected": false,
+        "drift_score": 0.9563455458178859,
+        "statistic": 0.006007946858407109
+      },
+      "use": {
+        "drift_detected": false,
+        "drift_score": 0.9486075942716202,
+        "statistic": 0.006128293113849215
+      },
+      "used": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999994637,
+        "statistic": 0.0023393454376529066
+      },
+      "using": {
+        "drift_detected": false,
+        "drift_score": 0.9999992098472632,
+        "statistic": 0.0032271106649203185
+      },
+      "ve": {
+        "drift_detected": false,
+        "drift_score": 0.9848545655764048,
+        "statistic": 0.005376363087672309
+      },
+      "very": {
+        "drift_detected": false,
+        "drift_score": 0.45320423502743823,
+        "statistic": 0.010100103976833252
+      },
+      "via": {
+        "drift_detected": false,
+        "drift_score": 0.9999617295642631,
+        "statistic": 0.003723293272272943
+      },
+      "vice": {
+        "drift_detected": false,
+        "drift_score": 0.9900148984925582,
+        "statistic": 0.005179731604722293
+      },
+      "victims": {
+        "drift_detected": false,
+        "drift_score": 0.9999997381721049,
+        "statistic": 0.0031190011725839017
+      },
+      "victory": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008631242865116961
+      },
+      "video": {
+        "drift_detected": false,
+        "drift_score": 0.999952348003982,
+        "statistic": 0.003758791356275437
+      },
+      "view": {
+        "drift_detected": false,
+        "drift_score": 0.9999661219860575,
+        "statistic": 0.0037039940955990724
+      },
+      "violence": {
+        "drift_detected": false,
+        "drift_score": 0.9865438067869354,
+        "statistic": 0.005318155530716129
+      },
+      "violent": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001866362145810485
+      },
+      "visit": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0005569075830170744
+      },
+      "vote": {
+        "drift_detected": false,
+        "drift_score": 0.9999999994077253,
+        "statistic": 0.002672388771791656
+      },
+      "voted": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999998762,
+        "statistic": 0.0022841854454631605
+      },
+      "voter": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0017531899136332685
+      },
+      "voters": {
+        "drift_detected": false,
+        "drift_score": 0.9999999635866589,
+        "statistic": 0.002950517035018918
+      },
+      "votes": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999983,
+        "statistic": 0.0021421435051434123
+      },
+      "voting": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0013361168791622413
+      },
+      "wall": {
+        "drift_detected": false,
+        "drift_score": 0.9999999482334508,
+        "statistic": 0.0029785465701689384
+      },
+      "want": {
+        "drift_detected": false,
+        "drift_score": 0.9916987305938048,
+        "statistic": 0.005099533837300774
+      },
+      "wanted": {
+        "drift_detected": false,
+        "drift_score": 0.9886995936190364,
+        "statistic": 0.005235750371520798
+      },
+      "wants": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999998,
+        "statistic": 0.002085517085553379
+      },
+      "war": {
+        "drift_detected": false,
+        "drift_score": 0.9277916834763532,
+        "statistic": 0.006406517485426089
+      },
+      "was": {
+        "drift_detected": false,
+        "drift_score": 0.4263443182879688,
+        "statistic": 0.010315070452690756
+      },
+      "washington": {
+        "drift_detected": false,
+        "drift_score": 0.9999999262214734,
+        "statistic": 0.003007608495010805
+      },
+      "wasn": {
+        "drift_detected": false,
+        "drift_score": 0.9997811108724721,
+        "statistic": 0.004038252735321102
+      },
+      "watch": {
+        "drift_detected": false,
+        "drift_score": 0.9999995152637675,
+        "statistic": 0.0031779000896039467
+      },
+      "water": {
+        "drift_detected": false,
+        "drift_score": 0.9999963613292063,
+        "statistic": 0.003397312351702486
+      },
+      "way": {
+        "drift_detected": false,
+        "drift_score": 0.42738124475515693,
+        "statistic": 0.010306634619802524
+      },
+      "we": {
+        "drift_detected": false,
+        "drift_score": 0.7627140746029275,
+        "statistic": 0.007864893486216273
+      },
+      "weapons": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0004171071374338142
+      },
+      "website": {
+        "drift_detected": false,
+        "drift_score": 0.9999995364598684,
+        "statistic": 0.0031735101082112083
+      },
+      "wednesday": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999511952,
+        "statistic": 0.002537995195946552
+      },
+      "week": {
+        "drift_detected": false,
+        "drift_score": 0.9999913968601408,
+        "statistic": 0.0035061690089511766
+      },
+      "weeks": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016706855458188397
+      },
+      "well": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018082910007055641
+      },
+      "went": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0016953512887293298
+      },
+      "were": {
+        "drift_detected": false,
+        "drift_score": 0.9503200008617848,
+        "statistic": 0.006102660086902967
+      },
+      "west": {
+        "drift_detected": false,
+        "drift_score": 0.9997146607942768,
+        "statistic": 0.00409371035336803
+      },
+      "western": {
+        "drift_detected": false,
+        "drift_score": 0.999999999998905,
+        "statistic": 0.0023676818994680104
+      },
+      "what": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0015593672747100662
+      },
+      "when": {
+        "drift_detected": false,
+        "drift_score": 0.9991331125244373,
+        "statistic": 0.00435478093465802
+      },
+      "where": {
+        "drift_detected": false,
+        "drift_score": 0.9999998572576798,
+        "statistic": 0.003064114004096452
+      },
+      "whether": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0018891367244203705
+      },
+      "which": {
+        "drift_detected": false,
+        "drift_score": 0.9930824772836034,
+        "statistic": 0.005024067080899863
+      },
+      "while": {
+        "drift_detected": false,
+        "drift_score": 0.9999993707848097,
+        "statistic": 0.0032038865472554523
+      },
+      "white": {
+        "drift_detected": false,
+        "drift_score": 0.9999999920601391,
+        "statistic": 0.0028377726400113934
+      },
+      "who": {
+        "drift_detected": false,
+        "drift_score": 0.18924347452520018,
+        "statistic": 0.01278484732196572
+      },
+      "whose": {
+        "drift_detected": false,
+        "drift_score": 0.9999431244412521,
+        "statistic": 0.003788209812092047
+      },
+      "why": {
+        "drift_detected": false,
+        "drift_score": 0.9721856180442912,
+        "statistic": 0.005711278984495638
+      },
+      "wife": {
+        "drift_detected": false,
+        "drift_score": 0.9999928847089753,
+        "statistic": 0.0034812335426077645
+      },
+      "will": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999992466,
+        "statistic": 0.0023527106988001645
+      },
+      "win": {
+        "drift_detected": false,
+        "drift_score": 0.9928682733313899,
+        "statistic": 0.005036443356125853
+      },
+      "wing": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0008073876442237227
+      },
+      "wire": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.0011145220274446643
+      },
+      "with": {
+        "drift_detected": false,
+        "drift_score": 0.37346176935278774,
+        "statistic": 0.010762482722974032
+      },
+      "within": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.000777401839117009
+      },
+      "without": {
+        "drift_detected": false,
+        "drift_score": 0.9999535451683297,
+        "statistic": 0.0037546183937368083
+      },
+      "woman": {
+        "drift_detected": false,
+        "drift_score": 0.9999717929636255,
+        "statistic": 0.0036755615254342455
+      },
+      "women": {
+        "drift_detected": false,
+        "drift_score": 0.9999999621318626,
+        "statistic": 0.002953598702748028
+      },
+      "won": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999999992,
+        "statistic": 0.0021190557993296943
+      },
+      "words": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999921342,
+        "statistic": 0.0024516743965682375
+      },
+      "work": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001062335193556918
+      },
+      "worked": {
+        "drift_detected": false,
+        "drift_score": 0.9997811440002048,
+        "statistic": 0.004038221732627689
+      },
+      "workers": {
+        "drift_detected": false,
+        "drift_score": 0.9999999999989454,
+        "statistic": 0.0023661627674889107
+      },
+      "working": {
+        "drift_detected": false,
+        "drift_score": 0.9981677412744835,
+        "statistic": 0.004562867912838553
+      },
+      "world": {
+        "drift_detected": false,
+        "drift_score": 0.9999991801778274,
+        "statistic": 0.0032309177956761914
+      },
+      "would": {
+        "drift_detected": false,
+        "drift_score": 0.23499210266902892,
+        "statistic": 0.012180195591032561
+      },
+      "wrong": {
+        "drift_detected": false,
+        "drift_score": 0.9998778710096536,
+        "statistic": 0.003923921002408903
+      },
+      "wrote": {
+        "drift_detected": false,
+        "drift_score": 0.9946218533333275,
+        "statistic": 0.004925435111951759
+      },
+      "year": {
+        "drift_detected": false,
+        "drift_score": 0.9999998071512224,
+        "statistic": 0.0030909654368951323
+      },
+      "years": {
+        "drift_detected": false,
+        "drift_score": 0.9937182854506807,
+        "statistic": 0.0049855586353630965
+      },
+      "yet": {
+        "drift_detected": false,
+        "drift_score": 0.9999931211099417,
+        "statistic": 0.0034768528620229278
+      },
+      "york": {
+        "drift_detected": false,
+        "drift_score": 0.9968338172472594,
+        "statistic": 0.004736213272736767
+      },
+      "you": {
+        "drift_detected": false,
+        "drift_score": 0.8185778619670446,
+        "statistic": 0.007439161399463989
+      },
+      "young": {
+        "drift_detected": false,
+        "drift_score": 1.0,
+        "statistic": 0.001837607147633702
+      },
+      "your": {
+        "drift_detected": false,
+        "drift_score": 0.9998760378122953,
+        "statistic": 0.003926717445358219
+      }
+    },
+    "drift_score": 0.0,
+    "drifted_features": []
+  }
+}

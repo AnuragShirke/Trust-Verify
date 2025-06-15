@@ -6,9 +6,7 @@ import pandas as pd
 import numpy as np
 import json
 from datetime import datetime
-from evidently.report import Report
-from evidently.metrics import DataDriftTable
-from evidently.metrics.base_metric import generate_column_metrics
+from scipy import stats
 from sklearn.feature_extraction.text import CountVectorizer
 from mlops.config import (
     MLOPS_DIR,
@@ -24,15 +22,67 @@ from mlops.mlflow_utils import (
 DRIFT_DIR = os.path.join(MLOPS_DIR, "drift")
 os.makedirs(DRIFT_DIR, exist_ok=True)
 
-def extract_text_features(texts, max_features=1000):
-    """Extract features from text data for drift detection."""
-    vectorizer = CountVectorizer(max_features=max_features)
-    features = vectorizer.fit_transform(texts).toarray()
-    feature_names = vectorizer.get_feature_names_out()
+def convert_to_serializable(obj):
+    """Convert NumPy and other types to JSON-serializable Python types."""
+    if isinstance(obj, dict):
+        return {k: convert_to_serializable(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_to_serializable(v) for v in obj]
+    elif isinstance(obj, (np.floating, float)):
+        return float(obj)
+    elif isinstance(obj, (np.integer, int)):
+        return int(obj)
+    elif isinstance(obj, (np.bool_, bool)):
+        return bool(obj)
+    elif isinstance(obj, str):
+        return str(obj)
+    elif obj is None:
+        return None
+    else:
+        return str(obj)
+
+def detect_drift_for_feature(reference_values, current_values, threshold=0.05):
+    """Detect drift for a single feature using Kolmogorov-Smirnov test."""
+    try:
+        statistic, p_value = stats.ks_2samp(reference_values, current_values)
+        return {
+            "drift_detected": p_value < threshold,
+            "drift_score": float(p_value),
+            "statistic": float(statistic)
+        }
+    except Exception as e:
+        print(f"Warning: Could not calculate drift: {e}")
+        return {
+            "drift_detected": False,
+            "drift_score": 1.0,
+            "statistic": 0.0
+        }
+
+def extract_text_features(reference_texts=None, current_texts=None, max_features=1000):
+    """Extract features from text data for drift detection.
     
-    # Convert to DataFrame for Evidently
-    df = pd.DataFrame(features, columns=feature_names)
-    return df
+    Args:
+        reference_texts: Reference text data to fit the vectorizer
+        current_texts: Current text data to transform
+        max_features: Maximum number of features
+    
+    Returns:
+        Tuple of (reference_features, current_features) DataFrames
+    """
+    vectorizer = CountVectorizer(max_features=max_features)
+    
+    # Fit on reference data
+    reference_features = vectorizer.fit_transform(reference_texts).toarray()
+    feature_names = vectorizer.get_feature_names_out()
+    reference_df = pd.DataFrame(reference_features, columns=feature_names)
+    
+    # Transform current data with the same vocabulary
+    if current_texts is not None:
+        current_features = vectorizer.transform(current_texts).toarray()
+        current_df = pd.DataFrame(current_features, columns=feature_names)
+        return reference_df, current_df
+    
+    return reference_df
 
 def calculate_prediction_drift(model, vectorizer, reference_data, current_data):
     """Calculate drift in model predictions between reference and current data."""
@@ -48,19 +98,16 @@ def calculate_prediction_drift(model, vectorizer, reference_data, current_data):
     reference_preds = model.predict(reference_features)
     current_preds = model.predict(current_features)
     
-    reference_probs = model.predict_proba(reference_features)[:, 1]
-    current_probs = model.predict_proba(current_features)[:, 1]
-    
     # Calculate prediction distribution drift
     ref_pos_rate = np.mean(reference_preds)
     curr_pos_rate = np.mean(current_preds)
-    
     pred_drift = abs(ref_pos_rate - curr_pos_rate)
     
-    # Calculate confidence drift
-    ref_conf = np.mean(np.max(model.predict_proba(reference_features), axis=1))
-    curr_conf = np.mean(np.max(model.predict_proba(current_features), axis=1))
-    
+    # Calculate confidence drift using class probabilities
+    ref_probs = model.predict_proba(reference_features)
+    curr_probs = model.predict_proba(current_features)
+    ref_conf = np.mean(np.max(ref_probs, axis=1))
+    curr_conf = np.mean(np.max(curr_probs, axis=1))
     conf_drift = abs(ref_conf - curr_conf)
     
     return pred_drift, conf_drift
@@ -79,28 +126,50 @@ def detect_drift(reference_path=None, current_path=None):
         current_path = os.path.join(PROCESSED_DATA_DIR, "test.csv")
     
     # Check if files exist
-    if not os.path.exists(reference_path) or not os.path.exists(current_path):
-        print(f"Reference or current data file not found")
+    if not os.path.exists(reference_path):
+        print(f"Reference data file not found: {reference_path}")
         return None
     
-    # Load data
-    reference_df = pd.read_csv(reference_path)
-    current_df = pd.read_csv(current_path)
+    if not os.path.exists(current_path):
+        print(f"Current data file not found: {current_path}")
+        print("Using a subset of reference data as current data for demonstration")
+        reference_df = pd.read_csv(reference_path)
+        # Split reference data into two parts
+        split_idx = len(reference_df) // 2
+        current_df = reference_df.iloc[split_idx:]
+        reference_df = reference_df.iloc[:split_idx]
+    else:
+        # Load both datasets normally
+        reference_df = pd.read_csv(reference_path)
+        current_df = pd.read_csv(current_path)
     
     # Extract features for data drift detection
-    reference_features = extract_text_features(reference_df["text"])
-    current_features = extract_text_features(current_df["text"])
+    reference_features, current_features = extract_text_features(
+        reference_texts=reference_df["text"],
+        current_texts=current_df["text"]
+    )
     
-    # Create Evidently report for data drift
-    data_drift_report = Report(metrics=[DataDriftTable()])
-    data_drift_report.run(reference_data=reference_features, current_data=current_features)
-    
-    # Extract drift metrics
+    # Calculate drift for each feature
     drift_metrics = {}
-    for metric in data_drift_report.metrics:
-        drift_metrics.update(metric.get_result())
+    drift_metrics["data_drift"] = {
+        "drift_by_feature": {}
+    }
     
-    # Calculate prediction drift
+    for column in reference_features.columns:
+        drift_metrics["data_drift"]["drift_by_feature"][column] = detect_drift_for_feature(
+            reference_features[column],
+            current_features[column]
+        )
+    
+    # Calculate overall drift score as percentage of features with drift
+    drifted_features = [
+        feature for feature, metrics in drift_metrics["data_drift"]["drift_by_feature"].items()
+        if metrics["drift_detected"]
+    ]
+    drift_metrics["data_drift"]["drift_score"] = len(drifted_features) / len(reference_features.columns)
+    drift_metrics["data_drift"]["drifted_features"] = drifted_features
+    
+    # Calculate prediction drift if model is available
     model = load_production_model()
     vectorizer = load_production_vectorizer()
     
@@ -117,25 +186,41 @@ def detect_drift(reference_path=None, current_path=None):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     report_path = os.path.join(DRIFT_DIR, f"drift_report_{timestamp}.json")
     
+    # Convert metrics to JSON-serializable format
+    drift_metrics_json = convert_to_serializable(drift_metrics)
+    
     with open(report_path, "w") as f:
-        json.dump(drift_metrics, f, indent=2)
+        json.dump(drift_metrics_json, f, indent=2)
     
     # Check if drift exceeds threshold
     drift_detected = False
+    drift_reasons = []
+    
     if "data_drift" in drift_metrics and drift_metrics["data_drift"]["drift_score"] > DRIFT_THRESHOLD:
         drift_detected = True
+        drift_reasons.append(f"Data drift score {drift_metrics['data_drift']['drift_score']:.3f} exceeds threshold {DRIFT_THRESHOLD}")
     
     if pred_drift is not None and pred_drift > DRIFT_THRESHOLD:
         drift_detected = True
+        drift_reasons.append(f"Prediction drift {pred_drift:.3f} exceeds threshold {DRIFT_THRESHOLD}")
     
     if conf_drift is not None and conf_drift > DRIFT_THRESHOLD:
         drift_detected = True
+        drift_reasons.append(f"Confidence drift {conf_drift:.3f} exceeds threshold {DRIFT_THRESHOLD}")
     
-    return {
+    result = {
         "drift_detected": drift_detected,
-        "metrics": drift_metrics,
+        "metrics": drift_metrics_json,
         "report_path": report_path
     }
+    
+    if drift_detected:
+        result["drift_reasons"] = drift_reasons
+        print("\nDrift detected for the following reasons:")
+        for reason in drift_reasons:
+            print(f"- {reason}")
+    
+    return result
 
 if __name__ == "__main__":
     # Run drift detection
