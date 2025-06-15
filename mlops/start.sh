@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Initialize data directory if needed
+if [ ! -s "/app/data/processed/train.csv" ]; then
+    echo "Warning: No training data found. Service will wait for data to be available."
+fi
+
 # Start MLflow tracking server
 mlflow server \
     --host 0.0.0.0 \
@@ -26,5 +31,7 @@ cleanup() {
 # Set up signal handling
 trap cleanup SIGTERM SIGINT
 
-# Wait for processes
-wait $RETRAINING_PID $DRIFT_PID
+# Keep the script running
+while true; do
+    sleep 10
+done

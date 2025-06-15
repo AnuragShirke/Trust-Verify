@@ -33,11 +33,12 @@ COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh
 
 # Ensure log directory is writable
-RUN chmod -R 777 /app/mlops/logs
+RUN chmod -R 777 /app/mlops/logs /app/data
 
-# Copy any existing data files
-COPY data/* /app/data/
-COPY model/* /app/mlops/model/
+# Create empty directories for data and model (will be mounted or populated later)
+RUN mkdir -p /app/data/processed \
+    && touch /app/data/processed/train.csv \
+    && echo "Creating placeholder files for initial deployment"
 
 # Expose port
 EXPOSE ${PORT}
