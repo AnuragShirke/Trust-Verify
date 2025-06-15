@@ -105,7 +105,8 @@ async def get_current_user(token: str = Depends(oauth2_scheme)) -> User:
     return User(
         id=user["id"],
         email=user["email"],
-        username=user["username"],
+        full_name=user.get("full_name", user.get("username", "")),  # Fallback to username if full_name is not available
+        is_google_user=user.get("is_google_user", False),
         created_at=datetime.fromisoformat(user["created_at"]),
         last_login=datetime.fromisoformat(user["last_login"]) if user["last_login"] else None,
         is_active=user["is_active"]

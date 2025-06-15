@@ -314,22 +314,31 @@ def trigger_drift_check(background_tasks: BackgroundTasks, current_user: User = 
 # Authentication endpoints
 
 @app.post("/register", response_model=User)
-def register_user(user: UserCreate):
+async def register_user(user_data: UserCreate):
     """
     Register a new user.
     """
     try:
-        created_user = create_user(user.email, user.username, user.password)
+        user = create_user(
+            email=user_data.email,
+            password=user_data.password,
+            full_name=user_data.full_name,
+            is_google_user=user_data.is_google_user
+        )
         return User(
-            id=created_user["id"],
-            email=created_user["email"],
-            username=created_user["username"],
-            created_at=datetime.fromisoformat(created_user["created_at"]),
-            last_login=None,
-            is_active=created_user["is_active"]
+            id=user["id"],
+            email=user["email"],
+            full_name=user["full_name"],
+            is_google_user=user["is_google_user"],
+            created_at=datetime.fromisoformat(user["created_at"]),
+            last_login=datetime.fromisoformat(user["last_login"]) if user["last_login"] else None,
+            is_active=user["is_active"]
         )
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=str(e)
+        )
 
 
 @app.post("/token", response_model=Token)

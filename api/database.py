@@ -57,11 +57,11 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     Verify a password against a hash.
 
     Args:
-        plain_password: The plain password
+        plain_password: The plain text password
         hashed_password: The hashed password
 
     Returns:
-        bool: True if the password matches the hash, False otherwise
+        bool: True if the password matches, False otherwise
     """
     return pwd_context.verify(plain_password, hashed_password)
 
@@ -113,7 +113,7 @@ def get_user_by_id(user_id: str) -> Optional[Dict[str, Any]]:
     return None
 
 
-def create_user(email: str, username: str, password: str) -> Dict[str, Any]:
+def create_user(email: str, username: str, password: str, full_name: str, is_google_user: bool = False) -> Dict[str, Any]:
     """
     Create a new user.
 
@@ -121,6 +121,8 @@ def create_user(email: str, username: str, password: str) -> Dict[str, Any]:
         email: The email of the user
         username: The username of the user
         password: The password of the user
+        full_name: The full name of the user
+        is_google_user: Whether the user is a Google user (default: False)
 
     Returns:
         Dict: The created user
@@ -138,6 +140,8 @@ def create_user(email: str, username: str, password: str) -> Dict[str, Any]:
         "email": email,
         "username": username,
         "hashed_password": get_password_hash(password),
+        "full_name": full_name,
+        "is_google_user": is_google_user,
         "created_at": datetime.now().isoformat(),
         "last_login": None,
         "is_active": True,
