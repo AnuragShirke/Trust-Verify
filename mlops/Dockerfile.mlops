@@ -11,22 +11,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+# Create necessary directories
+RUN mkdir -p /app/logs /app/model /app/data /app/mlops
+
 # Copy and install Python dependencies
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Create necessary directories
-RUN mkdir -p /app/logs /app/model /app/data
 
 # Set environment variables
 ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
 ENV PORT=10000
 
-# Copy application code
-COPY . /app/
-
-# Copy start script
+# Copy application code to mlops directory
+COPY *.py /app/mlops/
 COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh
 
