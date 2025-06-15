@@ -881,3 +881,46 @@ async def health_check():
                 "timestamp": datetime.now().isoformat()
             }
         )
+
+from google_auth import verify_google_token
+
+class GoogleAuthInput(BaseModel):
+    token: str
+
+@app.post("/auth/google")
+async def google_auth(input_data: GoogleAuthInput):
+    try:
+        user_data = await verify_google_token(input_data.token)
+        
+        # Check if user exists in database
+        db_user = await get_user_by_email(user_data["email"])
+        
+        if not db_user:
+            # Create new user if doesn't exist
+            user_create = UserCreate(
+                email=user_data["email"],
+                password=None,  # For Google Auth users
+                full_name=user_data["name"],
+                is_google_user=True
+            )
+            db_user = await create_user(user_create)
+        
+        # Create access token
+        access_token = create_access_token(
+            data={"sub": db_user.email}
+        )
+        
+        return {
+            "access_token": access_token,
+            "token_type": "bearer",
+            "user": {
+                "email": db_user.email,
+                "full_name": db_user.full_name,
+                "is_google_user": True
+            }
+        }
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=str(e)
+        )

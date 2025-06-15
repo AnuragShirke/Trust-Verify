@@ -13,9 +13,12 @@ class UserBase(BaseModel):
     username: str
 
 
-class UserCreate(UserBase):
+class UserCreate(BaseModel):
     """User creation model."""
-    password: str
+    email: EmailStr
+    password: Optional[str] = None
+    full_name: str
+    is_google_user: bool = False
 
 
 class UserLogin(BaseModel):
@@ -24,8 +27,12 @@ class UserLogin(BaseModel):
     password: str
 
 
-class User(UserBase):
+class User(BaseModel):
     """User model."""
+    email: EmailStr
+    full_name: str
+    is_google_user: bool = False
+    disabled: bool = False
     id: str
     created_at: datetime
     last_login: Optional[datetime] = None
