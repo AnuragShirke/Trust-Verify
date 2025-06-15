@@ -1,9 +1,13 @@
-
 /**
  * API service for connecting to the FastAPI backend
  */
 
-const API_BASE_URL = 'http://localhost:8000';
+// API Configuration
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const MLOPS_BASE_URL = import.meta.env.VITE_MLOPS_URL || 'http://localhost:8001';
+
+// Ensure URLs always end without a trailing slash
+const normalizeUrl = (url: string) => url.replace(/\/$/, '');
 
 interface PredictionResponse {
   prediction: 'REAL' | 'FAKE';

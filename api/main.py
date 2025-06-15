@@ -68,16 +68,18 @@ app = FastAPI(
 origins = [
     "http://localhost:5173",
     "http://localhost:8080",
+    "http://localhost:3000",
     "https://trustverify.vercel.app",
     "https://trust-verify-sandy.vercel.app",
-    "https://news-trust-visualizer.vercel.app"  # Add any other Vercel domains you're using
+    "https://trust-verify.vercel.app",
+    "https://news-trust-visualizer.vercel.app"
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],  # Temporarily allow all origins for debugging
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
     expose_headers=["*"]
 )
