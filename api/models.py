@@ -10,14 +10,14 @@ from pydantic import BaseModel, EmailStr, Field
 class UserBase(BaseModel):
     """Base user model."""
     email: EmailStr
-    username: str
 
 
 class UserCreate(BaseModel):
     """User creation model."""
     email: EmailStr
-    password: Optional[str] = None
-    full_name: str
+    username: str
+    password: str
+    full_name: Optional[str] = None
     is_google_user: bool = False
 
 
@@ -29,15 +29,14 @@ class UserLogin(BaseModel):
 
 class User(BaseModel):
     """User model."""
+    id: str
     email: EmailStr
     full_name: str
     is_google_user: bool = False
     disabled: bool = False
-    id: str
     created_at: datetime
     last_login: Optional[datetime] = None
     is_active: bool = True
-    is_admin: bool = False
 
     class Config:
         orm_mode = True

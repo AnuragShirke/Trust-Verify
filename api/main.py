@@ -77,9 +77,9 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Temporarily allow all origins for debugging
+    allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
     expose_headers=["*"]
 )
@@ -315,21 +315,26 @@ def trigger_drift_check(background_tasks: BackgroundTasks, current_user: User = 
 
 @app.post("/register", response_model=User)
 async def register_user(user_data: UserCreate):
-    """
-    Register a new user.
-    """
+    """Register a new user"""
     try:
+        # Create username from email if not provided
+        username = user_data.username if hasattr(user_data, 'username') else user_data.email.split('@')[0]
+        
+        # Use full_name if provided, otherwise use username
+        full_name = user_data.full_name if hasattr(user_data, 'full_name') else username
+        
         user = create_user(
             email=user_data.email,
             password=user_data.password,
-            full_name=user_data.full_name,
-            is_google_user=user_data.is_google_user
+            full_name=full_name,
+            is_google_user=user_data.is_google_user if hasattr(user_data, 'is_google_user') else False
         )
+        
         return User(
             id=user["id"],
             email=user["email"],
             full_name=user["full_name"],
-            is_google_user=user["is_google_user"],
+            is_google_user=user.get("is_google_user", False),
             created_at=datetime.fromisoformat(user["created_at"]),
             last_login=datetime.fromisoformat(user["last_login"]) if user["last_login"] else None,
             is_active=user["is_active"]
@@ -338,6 +343,11 @@ async def register_user(user_data: UserCreate):
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=str(e)
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to create user: {str(e)}"
         )
 
 

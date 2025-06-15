@@ -80,12 +80,20 @@ interface User {
   is_active: boolean;
 }
 
+interface RegisterData {
+  email: string;
+  username: string;
+  password: string;
+  full_name?: string;
+  is_google_user?: boolean;
+}
+
 interface AuthContextType {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
   login: (email: string, password: string) => Promise<void>;
-  register: (email: string, username: string, password: string) => Promise<void>;
+  register: (data: RegisterData) => Promise<void>;
   logout: () => void;
 }
 
@@ -125,13 +133,26 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser(userData);
   };
 
-  const register = async (email: string, username: string, password: string) => {
-    const userData = await registerUser(email, username, password);
+  const register = async (data: RegisterData) => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    // Auto login after registration
-    await login(email, password);
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Registration failed');
+      }
 
-    return userData;
+      // Login after successful registration
+      await login(data.email, data.password);
+    } catch (error) {
+      throw error;
+    }
   };
 
   const logout = () => {
