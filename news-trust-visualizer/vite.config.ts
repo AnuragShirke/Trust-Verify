@@ -10,10 +10,14 @@ export default defineConfig(({ mode }) => ({
     port: 5173,
     strictPort: true,
     cors: true,
-    hmr: {
-      host: "localhost",
-      port: 5173,
-    },
+    proxy: {
+      '/api': {
+        target: process.env.VITE_API_URL || 'https://your-render-api-url.onrender.com',
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   },
   plugins: [
     react(),

@@ -65,26 +65,21 @@ app = FastAPI(
 )
 
 # Configure CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Update this with specific origins in production
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+origins = [
+    "http://localhost:5173",
+    "http://localhost:8080",
+    "https://trustverify.vercel.app",
+    "https://trust-verify-sandy.vercel.app",
+    "https://news-trust-visualizer.vercel.app"  # Add any other Vercel domains you're using
+]
 
-# Enable CORS
-# Default local origins + placeholder for production frontend URL
-origins = os.environ.get(
-    "CORS_ORIGINS",
-    "http://localhost:5173,http://localhost:8080,https://trustverify.vercel.app,https://trust-verify-sandy.vercel.app"
-).split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
+    expose_headers=["*"]
 )
 
 # Create a directory for static files if it doesn't exist
