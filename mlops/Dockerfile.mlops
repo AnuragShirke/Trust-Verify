@@ -11,8 +11,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Create necessary directories
-RUN mkdir -p /app/logs /app/model /app/data /app/mlops
+# Create all necessary directories
+RUN mkdir -p /app/mlops/logs \
+    /app/mlops/model \
+    /app/data/processed \
+    /app/data/raw \
+    /app/mlops/drift
 
 # Copy and install Python dependencies
 COPY requirements.txt /app/requirements.txt
@@ -27,6 +31,13 @@ ENV PORT=10000
 COPY *.py /app/mlops/
 COPY start.sh /app/start.sh
 RUN chmod +x /app/start.sh
+
+# Ensure log directory is writable
+RUN chmod -R 777 /app/mlops/logs
+
+# Copy any existing data files
+COPY data/* /app/data/
+COPY model/* /app/mlops/model/
 
 # Expose port
 EXPOSE ${PORT}
